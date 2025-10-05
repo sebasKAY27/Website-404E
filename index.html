@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Escuadrón 404 - Comunidad de Desarrolladores</title>
+<meta content="Únete a Escuadrón 404, la comunidad de desarrolladores más innovadora. Servicios de desarrollo web, bootcamp de programación y networking tech." name="description"/>
+<link href="tailwind.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body class="bg-black text-white font-mono scanlines" data-theme="dark">
+<!-- Navigation -->
+<nav class="navbar fixed w-full top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16">
+<div class="flex items-center">
+<a class="text-2xl font-bold text-gradient" href="index.html">Escuadrón 404</a>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="nav-link active" href="index.html">Inicio</a>
+<a class="nav-link" href="comunidad.html">Comunidad</a>
+<a class="nav-link" href="agencia.html">Agencia</a>
+<a class="nav-link" href="bootcamp.html">Bootcamp</a>
+<a class="nav-link" href="eventos.html">Eventos</a>
+<a class="nav-link" href="proyectos.html">Proyectos</a>
+<a class="nav-link" href="contacto.html">Contacto</a>
+<a class="nav-link flex items-center" href="https://discord.gg/QQZmhGQncf" target="_blank">
+<i class="fab fa-discord mr-2"></i>Discord
+                    </a>
+</div>
+<div class="md:hidden flex items-center">
+<button class="text-white hover:text-purple-400" id="mobile-menu-button">
+<i class="fas fa-bars text-xl"></i>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile menu -->
+<div class="hidden md:hidden bg-black border-t border-purple-500" id="mobile-menu">
+<div class="px-2 pt-2 pb-3 space-y-1">
+<a class="nav-link block px-3 py-2" href="index.html">Inicio</a>
+<a class="nav-link block px-3 py-2" href="comunidad.html">Comunidad</a>
+<a class="nav-link block px-3 py-2" href="agencia.html">Agencia</a>
+<a class="nav-link block px-3 py-2" href="bootcamp.html">Bootcamp</a>
+<a class="nav-link block px-3 py-2" href="eventos.html">Eventos</a>
+<a class="nav-link block px-3 py-2" href="proyectos.html">Proyectos</a>
+<a class="nav-link block px-3 py-2" href="contacto.html">Contacto</a>
+<a class="nav-link block px-3 py-2" href="https://discord.gg/QQZmhGQncf" target="_blank">
+<i class="fab fa-discord mr-2"></i>Discord
+                </a>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="hero-section min-h-screen flex items-center pt-16" id="hero">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+<div class="text-center">
+<h1 class="text-4xl sm:text-6xl font-bold mb-6 animate-slide-in-left nes-title glitch" data-text="Bienvenido a Escuadrón 404">
+                    Bienvenido a <span class="text-gradient">Escuadrón 404</span>
+</h1>
+<div class="terminal-effect text-xl sm:text-2xl mb-8 max-w-3xl mx-auto animate-fade-in">
+<div class="flex items-center justify-center mb-2">
+<span class="text-green-400 mr-2">$</span>
+<span class="text-blue-400">echo</span>
+<span class="text-white ml-2">"La comunidad de desarrolladores más innovadora"</span>
+<span class="terminal-cursor"></span>
+</div>
+<div class="text-sm text-gray-400">
+                        Creamos soluciones digitales extraordinarias y formamos el talento del futuro
+                    </div>
+</div>
+<div class="flex flex-col sm:flex-row gap-6 justify-center mb-12 animate-bounce-in">
+<a class="modern-btn modern-btn-primary" href="https://discord.gg/QQZmhGQncf" target="_blank">
+<span class="btn-icon">
+<i class="fab fa-discord"></i>
+</span>
+<span class="btn-text">Únete a Discord</span>
+<span class="btn-shine"></span>
+</a>
+<a class="modern-btn modern-btn-secondary" href="agencia.html">
+<span class="btn-icon">
+<i class="fas fa-briefcase"></i>
+</span>
+<span class="btn-text">Nuestros Servicios</span>
+<span class="btn-shine"></span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Comunidad Section -->
+<section class="py-20 bg-gray-900" id="comunidad">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">Nuestra Comunidad</h2>
+<p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Somos una comunidad apasionada por la tecnología, la innovación y el crecimiento profesional
+                </p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="enhanced-card text-center p-6">
+<div class="w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+<i class="fas fa-users text-white text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-2">150+ Miembros</h3>
+<p class="text-gray-300">Desarrolladores activos de toda latinoamerica</p>
+</div>
+<div class="enhanced-card text-center p-6">
+<div class="w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+<i class="fas fa-code text-white text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-2">Proyectos Colaborativos</h3>
+<p class="text-gray-300">Trabajamos juntos en soluciones innovadoras</p>
+</div>
+<div class="enhanced-card text-center p-6">
+<div class="w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+<i class="fas fa-lightbulb text-white text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-2">Innovación Constante</h3>
+<p class="text-gray-300">Siempre a la vanguardia de la tecnología</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Agencia Section -->
+<section class="py-20 bg-black" id="agencia">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">Agencia Digital</h2>
+<p class="text-xl text-gray-300">Servicios profesionales de desarrollo web y móvil</p>
+</div>
+<!-- Servicios -->
+<div class="grid md:grid-cols-3 gap-8 mb-16">
+<div class="enhanced-card p-6">
+<i class="fas fa-laptop-code text-purple-500 text-3xl mb-4"></i>
+<h3 class="text-xl font-semibold mb-2">Desarrollo Web</h3>
+<p class="text-gray-300">Sitios web modernos, aplicaciones web y e-commerce</p>
+</div>
+<div class="enhanced-card p-6">
+<i class="fas fa-mobile-alt text-purple-500 text-3xl mb-4"></i>
+<h3 class="text-xl font-semibold mb-2">Apps Móviles</h3>
+<p class="text-gray-300">Aplicaciones nativas e híbridas para iOS y Android</p>
+</div>
+<div class="enhanced-card p-6">
+<i class="fas fa-cloud text-purple-500 text-3xl mb-4"></i>
+<h3 class="text-xl font-semibold mb-2">Cloud &amp; DevOps</h3>
+<p class="text-gray-300">Infraestructura en la nube y automatización</p>
+</div>
+</div>
+<!-- Talento -->
+<div class="text-center mb-8">
+<h3 class="text-2xl font-bold mb-8 text-gradient">Nuestro Talento</h3>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="enhanced-card text-center p-6">
+<div class="w-20 h-20 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+<span class="text-white font-bold text-xl">MA</span>
+</div>
+<h4 class="text-lg font-semibold mb-2">Jhonander</h4>
+<p class="text-purple-400 mb-2">full-stack Developer</p>
+<p class="text-gray-300 text-sm">Especialista en React y Vue.js con 5 años de experiencia</p>
+</div>
+<div class="enhanced-card text-center p-6">
+<div class="w-20 h-20 bg-gradient-to-r from-green-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+<span class="text-white font-bold text-xl">CR</span>
+</div>
+<h4 class="text-lg font-semibold mb-2">Angel</h4>
+<p class="text-purple-400 mb-2">Frontend Developer</p>
+<p class="text-gray-300 text-sm">10 años de experiencia en desarrollo web </p>
+</div>
+<div class="enhanced-card text-center p-6">
+<div class="w-20 h-20 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+<span class="text-white font-bold text-xl">LS</span>
+</div>
+<h4 class="text-lg font-semibold mb-2">Nicola</h4>
+<p class="text-purple-400 mb-2">Front-backend Developer</p>
+<p class="text-gray-300 text-sm"> Con 4 años de experencia en front y backend</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Bootcamp Section -->
+<section class="py-20 bg-gray-900" id="bootcamp">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="text-3xl sm:text-4xl font-bold mb-6 text-gradient">Bootcamp de Programación</h2>
+<p class="text-xl text-gray-300 mb-6">
+                        Transforma tu carrera con nuestro programa intensivo de desarrollo full-stack
+                    </p>
+<div class="space-y-4 mb-8">
+<div class="flex items-center">
+<i class="fas fa-check text-green-400 mr-3"></i>
+<span class="text-gray-300">12 semanas de formación intensiva</span>
+</div>
+<div class="flex items-center">
+<i class="fas fa-check text-green-400 mr-3"></i>
+<span class="text-gray-300">Mentoría personalizada</span>
+</div>
+<div class="flex items-center">
+<i class="fas fa-check text-green-400 mr-3"></i>
+<span class="text-gray-300">Proyectos reales con empresas</span>
+</div>
+<div class="flex items-center">
+<i class="fas fa-check text-green-400 mr-3"></i>
+<span class="text-gray-300">Garantía de empleo o devolución</span>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-4 text-center">
+<div class="enhanced-card p-4">
+<div class="text-2xl font-bold text-purple-400">200+</div>
+<div class="text-sm text-gray-300">Graduados</div>
+</div>
+<div class="enhanced-card p-4">
+<div class="text-2xl font-bold text-purple-400">85%</div>
+<div class="text-sm text-gray-300">Empleados</div>
+</div>
+<div class="enhanced-card p-4">
+<div class="text-2xl font-bold text-purple-400">$2.5M</div>
+<div class="text-sm text-gray-300">Salario promedio</div>
+</div>
+</div>
+</div>
+<div class="enhanced-card p-8">
+<h3 class="text-2xl font-bold mb-6 text-center">Pre-registro Bootcamp</h3>
+<form class="space-y-6" id="bootcamp-form">
+<div>
+<label class="block text-sm font-medium text-gray-300 mb-2" for="name">Nombre
+                                completo</label>
+<input class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:outline-none" id="name" name="name" required="" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-300 mb-2" for="email">Email</label>
+<input class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:outline-none" id="email" name="email" required="" type="email"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-300 mb-2" for="phone">Teléfono</label>
+<input class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:outline-none" id="phone" name="phone" type="tel"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-300 mb-2" for="experience">Experiencia
+                                previa</label>
+<select class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:outline-none" id="experience" name="experience">
+<option value="ninguna">Ninguna</option>
+<option value="basica">Básica</option>
+<option value="intermedia">Intermedia</option>
+<option value="avanzada">Avanzada</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-300 mb-2" for="motivation">¿Por qué
+                                quieres unirte?</label>
+<textarea class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:outline-none" id="motivation" name="motivation" rows="3"></textarea>
+</div>
+<button class="w-full btn-primary" type="submit">
+<i class="fas fa-paper-plane mr-2"></i>
+                            Enviar Pre-registro
+                        </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Eventos Section -->
+<section class="py-20 bg-black" id="eventos">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">Próximos Eventos</h2>
+<p class="text-xl text-gray-300">Únete a nuestros workshops y meetups</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="enhanced-card p-6">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+<i class="fas fa-calendar text-white"></i>
+</div>
+<div>
+<h3 class="text-lg font-semibold">Tech Meetup</h3>
+<p class="text-gray-400 text-sm">27 Noviembre 2025</p>
+</div>
+</div>
+<p class="text-gray-300 mb-4">Networking y charlas sobre las últimas tendencias en desarrollo web
+                    </p>
+<a class="text-purple-400 hover:text-purple-300" href="#contacto">Más información →</a>
+</div>
+<div class="enhanced-card p-6">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+<i class="fas fa-code text-white"></i>
+</div>
+<div>
+<h3 class="text-lg font-semibold">Workshop React</h3>
+<p class="text-gray-400 text-sm">10 de diciembre 2025</p>
+</div>
+</div>
+<p class="text-gray-300 mb-4">Aprende React desde cero con proyectos prácticos</p>
+<a class="text-purple-400 hover:text-purple-300" href="#contacto">Registrarse →</a>
+</div>
+<div class="enhanced-card p-6">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+<i class="fas fa-users text-white"></i>
+</div>
+<div>
+<h3 class="text-lg font-semibold">Hackathon</h3>
+<p class="text-gray-400 text-sm">25 Octubre 2025</p>
+</div>
+</div>
+<p class="text-gray-300 mb-4">48 horas de programación intensiva con premios</p>
+<a class="text-purple-400 hover:text-purple-300" href="https://discord.gg/QQZmhGQncf" target="_blank">Participar →</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Proyectos Section -->
+<section class="py-20 bg-gray-900" id="proyectos">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">Nuestros Proyectos</h2>
+<p class="text-xl text-gray-300">Portafolio en proceso de soluciones desarrolladas</p>
+</div>
+<!-- Filtros -->
+<div class="flex justify-center mb-12">
+<div class="bg-gray-800 p-1 rounded-lg">
+<button class="proyecto-filter active px-6 py-2 rounded-md" data-filter="all">Todos</button>
+<button class="proyecto-filter px-6 py-2 rounded-md" data-filter="finalizado">Finalizados</button>
+<button class="proyecto-filter px-6 py-2 rounded-md" data-filter="proceso">En Proceso</button>
+</div>
+</div>
+<!-- Proyectos -->
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="proyecto-card enhanced-card" data-status="proceso">
+<div class="project-image h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+<i class="fas fa-shopping-cart text-white text-4xl" aria-hidden="true"></i>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-2">
+<h3 class="text-lg font-semibold">E-commerce Platform</h3>
+<span class="px-2 py-1 bg-yellow-500 text-white text-xs rounded">En Proceso</span>
+</div>
+<p class="text-gray-300 mb-4">Plataforma de comercio electrónico con React y Node.js</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">React</span>
+<span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">Node.js</span>
+<span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">MongoDB</span>
+</div>
+</div>
+</div>
+<div class="proyecto-card enhanced-card" data-status="proceso">
+<div class="project-image h-48 bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center">
+<i class="fas fa-mobile-alt text-white text-4xl" aria-hidden="true"></i>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-2">
+<h3 class="text-lg font-semibold">App Móvil Fintech</h3>
+<span class="px-2 py-1 bg-yellow-500 text-white text-xs rounded">En Proceso</span>
+</div>
+<p class="text-gray-300 mb-4">Aplicación móvil para gestión financiera personal</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">React Native</span>
+<span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">Firebase</span>
+<span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">TypeScript</span>
+</div>
+</div>
+</div>
+<div class="proyecto-card enhanced-card" data-status="proceso">
+<div class="project-image h-48 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center">
+<i class="fas fa-chart-line text-white text-4xl" aria-hidden="true"></i>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-2">
+<h3 class="text-lg font-semibold">Dashboard Analytics</h3>
+<span class="px-2 py-1 bg-yellow-500 text-white text-xs rounded">En Proceso</span>
+</div>
+<p class="text-gray-300 mb-4">Panel de control con visualización de datos en tiempo real</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">Vue.js</span>
+<span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">D3.js</span>
+<span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">Python</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contacto Section -->
+<section class="py-20 bg-black" id="contacto">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">Contacto B2B</h2>
+<p class="text-xl text-gray-300">¿Tienes un proyecto en mente? Hablemos</p>
+</div>
+<div class="grid lg:grid-cols-2 gap-12">
+<div>
+<h3 class="text-2xl font-bold mb-6">Información de Contacto</h3>
+<div class="space-y-6">
+<div class="flex items-center">
+<i class="fas fa-envelope text-purple-500 mr-4"></i>
+<span class="text-gray-300">agenciae404@gmail.com</span>
+</div>
+<div class="flex items-center">
+<i class="fas fa-phone text-purple-500 mr-4"></i>
+<span class="text-gray-300">+57 320 8490176</span>
+</div>
+<div class="flex items-center">
+<i class="fab fa-whatsapp text-purple-500 mr-4"></i>
+<a class="text-gray-300 hover:text-purple-400" href="https://wa.me/573208490176">WhatsApp</a>
+</div>
+<div class="flex items-center">
+<i class="fas fa-map-marker-alt text-purple-500 mr-4"></i>
+<span class="text-gray-300">Cucuta, Colombia</span>
+</div>
+</div>
+<div class="mt-8">
+<h4 class="text-lg font-semibold mb-4">Nuestro Proceso</h4>
+<div class="space-y-3">
+<div class="flex items-center">
+<div class="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center mr-3">
+<span class="text-white text-sm font-bold">1</span>
+</div>
+<span class="text-gray-300">Consulta inicial y análisis de requerimientos</span>
+</div>
+<div class="flex items-center">
+<div class="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center mr-3">
+<span class="text-white text-sm font-bold">2</span>
+</div>
+<span class="text-gray-300">Propuesta técnica y cotización</span>
+</div>
+<div class="flex items-center">
+<div class="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center mr-3">
+<span class="text-white text-sm font-bold">3</span>
+</div>
+<span class="text-gray-300">Desarrollo y seguimiento continuo</span>
+</div>
+<div class="flex items-center">
+<div class="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center mr-3">
+<span class="text-white text-sm font-bold">4</span>
+</div>
+<span class="text-gray-300">Entrega y soporte post-lanzamiento</span>
+</div>
+</div>
+</div>
+</div>
+<div class="enhanced-card p-8">
+<h3 class="text-2xl font-bold mb-6">Solicitar Cotización</h3>
+<form class="space-y-6" id="contact-form">
+<div>
+<label class="block text-sm font-medium text-gray-300 mb-2" for="empresa">Empresa</label>
+<input class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:outline-none" id="empresa" name="empresa" required="" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-300 mb-2" for="nombreContacto">Nombre del
+                                contacto</label>
+<input class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:outline-none" id="nombreContacto" name="nombreContacto" required="" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-300 mb-2" for="emailCorporativo">Email
+                                corporativo</label>
+<input class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:outline-none" id="emailCorporativo" name="emailCorporativo" required="" type="email"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-300 mb-2" for="telefono">Teléfono</label>
+<input class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:outline-none" id="telefono" name="telefono" required="" type="tel"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-300 mb-2" for="tipoServicio">Tipo de
+                                servicio</label>
+<select class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:outline-none" id="tipoServicio" name="tipoServicio" required="">
+<option value="">Seleccionar servicio</option>
+<option value="desarrollo-web">Desarrollo Web</option>
+<option value="app-movil">App Móvil</option>
+<option value="ecommerce">E-commerce</option>
+<option value="consultoria">Consultoría</option>
+<option value="otros">Otros</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-300 mb-2" for="presupuesto">Presupuesto
+                                aproximado</label>
+<select class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:outline-none" id="presupuesto" name="presupuesto">
+<option value="">Seleccionar rango</option>
+<option value="menos-1000">Menos de $1,000 USD</option>
+<option value="1000-5000">$1,000 - $5,000 USD</option>
+<option value="5000-10000">$5,000 - $10,000 USD</option>
+<option value="10000-25000">$10,000 - $25,000 USD</option>
+<option value="mas-25000">Más de $25,000 USD</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-300 mb-2" for="descripcionProyecto">Descripción del proyecto</label>
+<textarea class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:outline-none" id="descripcionProyecto" name="descripcionProyecto" required="" rows="4"></textarea>
+</div>
+<button class="w-full btn-primary" type="submit">
+<i class="fas fa-paper-plane mr-2"></i>
+                            Enviar Solicitud
+                        </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-4 gap-8">
+<div class="col-span-1 md:col-span-2">
+<h3 class="text-2xl font-bold text-purple-400 mb-4">Escuadrón 404</h3>
+<p class="text-gray-300 mb-4">
+                        Somos la comunidad de desarrolladores que transforma ideas en soluciones digitales
+                        extraordinarias.
+                        Únete a nosotros y forma parte del futuro de la tecnología.
+                    </p>
+<div class="flex space-x-4">
+<a class="text-gray-400 hover:text-purple-400 transition-colors" href="https://discord.gg/QQZmhGQncf" target="_blank">
+<i class="fab fa-discord text-xl"></i>
+</a>
+<a class="text-gray-400 hover:text-purple-400 transition-colors" href="https://wa.me/573001234567">
+<i class="fab fa-whatsapp text-xl"></i>
+</a>
+<a class="text-gray-400 hover:text-purple-400 transition-colors" href="https://github.com" target="_blank" aria-label="GitHub">
+<i class="fab fa-github text-xl"></i>
+</a>
+<a class="text-gray-400 hover:text-purple-400 transition-colors" href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+<i class="fab fa-linkedin text-xl"></i>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Servicios</h4>
+<ul class="space-y-2 text-gray-300">
+<li><a class="hover:text-purple-400 transition-colors" href="agencia.html">Desarrollo Web</a>
+</li>
+<li><a class="hover:text-purple-400 transition-colors" href="agencia.html">Apps Móviles</a></li>
+<li><a class="hover:text-purple-400 transition-colors" href="agencia.html">Cloud &amp; DevOps</a>
+</li>
+<li><a class="hover:text-purple-400 transition-colors" href="bootcamp.html">Bootcamp</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Comunidad</h4>
+<ul class="space-y-2 text-gray-300">
+<li><a class="hover:text-purple-400 transition-colors" href="comunidad.html">Sobre Nosotros</a>
+</li>
+<li><a class="hover:text-purple-400 transition-colors" href="eventos.html">Eventos</a></li>
+<li><a class="hover:text-purple-400 transition-colors" href="proyectos.html">Proyectos</a></li>
+<li><a class="hover:text-purple-400 transition-colors" href="contacto.html">Contacto</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+<p>© 2025 Escuadrón 404. Todos los derechos reservados.</p>
+</div>
+</div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

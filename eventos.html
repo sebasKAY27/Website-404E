@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Eventos - Escuadrón 404</title>
+<meta content="Únete a nuestros workshops, meetups y hackathons. Eventos técnicos para desarrolladores de todos los niveles." name="description"/>
+<link href="tailwind.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body class="bg-black text-white font-mono" data-theme="dark">
+<!-- Navigation -->
+<nav class="navbar fixed w-full top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16">
+<div class="flex items-center">
+<a class="text-2xl font-bold text-gradient" href="index.html">Escuadrón 404</a>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="nav-link" href="index.html">Inicio</a>
+<a class="nav-link" href="comunidad.html">Comunidad</a>
+<a class="nav-link" href="agencia.html">Agencia</a>
+<a class="nav-link" href="bootcamp.html">Bootcamp</a>
+<a class="nav-link active" href="eventos.html">Eventos</a>
+<a class="nav-link" href="proyectos.html">Proyectos</a>
+<a class="nav-link" href="contacto.html">Contacto</a>
+</div>
+<div class="md:hidden flex items-center">
+<button class="text-white hover:text-purple-400" id="mobile-menu-btn">
+<i class="fas fa-bars text-xl"></i>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile menu -->
+<div class="hidden md:hidden bg-black border-t border-purple-500" id="mobile-menu">
+<div class="px-2 pt-2 pb-3 space-y-1">
+<a class="nav-link block px-3 py-2" href="index.html">Inicio</a>
+<a class="nav-link block px-3 py-2" href="comunidad.html">Comunidad</a>
+<a class="nav-link block px-3 py-2" href="agencia.html">Agencia</a>
+<a class="nav-link block px-3 py-2" href="bootcamp.html">Bootcamp</a>
+<a class="nav-link block px-3 py-2" href="eventos.html">Eventos</a>
+<a class="nav-link block px-3 py-2" href="proyectos.html">Proyectos</a>
+<a class="nav-link block px-3 py-2" href="contacto.html">Contacto</a>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="hero-section min-h-screen flex items-center pt-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+<div class="text-center">
+<h1 class="text-4xl sm:text-6xl font-bold mb-6 animate-slide-in-left">
+                    Nuestros <span class="text-gradient">Eventos</span>
+</h1>
+<div class="terminal-effect text-xl sm:text-2xl mb-8 max-w-3xl mx-auto animate-fade-in">
+<div class="flex items-center justify-center mb-2">
+<span class="text-green-400 mr-2">$</span>
+<span class="text-blue-400">echo</span>
+<span class="text-white ml-2">"Conecta, aprende y crea con la comunidad"</span>
+</div>
+<div class="text-sm text-gray-400">
+                        Workshops, meetups, hackathons y eventos técnicos para desarrolladores de todos los niveles
+                    </div>
+</div>
+<div class="flex flex-col sm:flex-row gap-6 justify-center mb-12 animate-bounce-in">
+<a class="modern-btn modern-btn-primary" href="#proximos-eventos">
+<span class="btn-icon">
+<i class="fas fa-calendar"></i>
+</span>
+<span class="btn-text">Ver Próximos Eventos</span>
+<span class="btn-shine"></span>
+</a>
+<a class="modern-btn modern-btn-secondary" href="https://discord.gg/QQZmhGQncf" id="discord-cta" target="_blank">
+<span class="btn-icon">
+<i class="fab fa-discord"></i>
+</span>
+<span class="btn-text">Únete a Discord</span>
+<span class="btn-shine"></span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Upcoming Events -->
+<section class="py-20 bg-gray-900" id="proximos-eventos">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">Próximos Eventos</h2>
+<p class="text-xl text-gray-300">No te pierdas estos increíbles eventos</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="enhanced-card p-6">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+<i class="fas fa-users text-white"></i>
+</div>
+<div>
+<h3 class="text-lg font-semibold">Tech Meetup</h3>
+<p class="text-gray-400 text-sm">22 Marzo 2024</p>
+</div>
+</div>
+<p class="text-gray-300 mb-4">
+                        Networking y charlas sobre las últimas tendencias en desarrollo web. 
+                        Conoce a otros desarrolladores y comparte experiencias.
+                    </p>
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 bg-green-500 text-white text-xs rounded">Presencial</span>
+<a class="text-purple-400 hover:text-purple-300" href="javascript:void(0)">Más información →</a>
+</div>
+</div>
+<div class="enhanced-card p-6">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+<i class="fas fa-code text-white"></i>
+</div>
+<div>
+<h3 class="text-lg font-semibold">Workshop React</h3>
+<p class="text-gray-400 text-sm">29 Marzo 2024</p>
+</div>
+</div>
+<p class="text-gray-300 mb-4">
+                        Aprende React desde cero con proyectos prácticos. 
+                        Perfecto para desarrolladores que quieren dominar esta tecnología.
+                    </p>
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 bg-blue-500 text-white text-xs rounded">Virtual</span>
+<a class="text-purple-400 hover:text-purple-300" href="javascript:void(0)">Registrarse →</a>
+</div>
+</div>
+<div class="enhanced-card p-6">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+<i class="fas fa-trophy text-white"></i>
+</div>
+<div>
+<h3 class="text-lg font-semibold">Hackathon 404</h3>
+<p class="text-gray-400 text-sm">5 Abril 2024</p>
+</div>
+</div>
+<p class="text-gray-300 mb-4">
+                        48 horas de programación intensiva con premios increíbles. 
+                        Forma equipos y crea la solución del futuro.
+                    </p>
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 bg-yellow-500 text-white text-xs rounded">Híbrido</span>
+<a class="text-purple-400 hover:text-purple-300" href="javascript:void(0)">Participar →</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Event Types -->
+<section class="py-20 bg-black">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">Tipos de Eventos</h2>
+<p class="text-xl text-gray-300">Diferentes formatos para diferentes necesidades</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="enhanced-card p-6 text-center">
+<div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+<i class="fas fa-chalkboard-teacher text-white text-2xl"></i>
+</div>
+<h3 class="text-lg font-semibold mb-2">Workshops</h3>
+<p class="text-gray-300 text-sm">
+                        Sesiones prácticas donde aprendes nuevas tecnologías 
+                        y técnicas de desarrollo hands-on.
+                    </p>
+</div>
+<div class="enhanced-card p-6 text-center">
+<div class="w-16 h-16 bg-gradient-to-r from-green-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+<i class="fas fa-users text-white text-2xl"></i>
+</div>
+<h3 class="text-lg font-semibold mb-2">Meetups</h3>
+<p class="text-gray-300 text-sm">
+                        Encuentros informales para networking, 
+                        compartir experiencias y conocer la comunidad.
+                    </p>
+</div>
+<div class="enhanced-card p-6 text-center">
+<div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+<i class="fas fa-trophy text-white text-2xl"></i>
+</div>
+<h3 class="text-lg font-semibold mb-2">Hackathons</h3>
+<p class="text-gray-300 text-sm">
+                        Competencias intensivas donde desarrollas 
+                        soluciones innovadoras en tiempo récord.
+                    </p>
+</div>
+<div class="enhanced-card p-6 text-center">
+<div class="w-16 h-16 bg-gradient-to-r from-yellow-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+<i class="fas fa-microphone text-white text-2xl"></i>
+</div>
+<h3 class="text-lg font-semibold mb-2">Conferencias</h3>
+<p class="text-gray-300 text-sm">
+                        Eventos con speakers expertos compartiendo 
+                        conocimientos avanzados y tendencias del sector.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Calendar Section -->
+<section class="py-20 bg-gray-900">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">Calendario de Eventos</h2>
+<p class="text-xl text-gray-300">Planifica tu participación en nuestros eventos</p>
+</div>
+<div class="enhanced-card p-8">
+<div class="grid md:grid-cols-7 gap-4 mb-6">
+<div class="text-center font-semibold text-purple-400">Lun</div>
+<div class="text-center font-semibold text-purple-400">Mar</div>
+<div class="text-center font-semibold text-purple-400">Mié</div>
+<div class="text-center font-semibold text-purple-400">Jue</div>
+<div class="text-center font-semibold text-purple-400">Vie</div>
+<div class="text-center font-semibold text-purple-400">Sáb</div>
+<div class="text-center font-semibold text-purple-400">Dom</div>
+</div>
+<div class="grid md:grid-cols-7 gap-4">
+<div class="h-16 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">1</div>
+<div class="h-16 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">2</div>
+<div class="h-16 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">3</div>
+<div class="h-16 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">4</div>
+<div class="h-16 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">5</div>
+<div class="h-16 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">6</div>
+<div class="h-16 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">7</div>
+<div class="h-16 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">8</div>
+<div class="h-16 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">9</div>
+<div class="h-16 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">10</div>
+<div class="h-16 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">11</div>
+<div class="h-16 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">12</div>
+<div class="h-16 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">13</div>
+<div class="h-16 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">14</div>
+<div class="h-16 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">15</div>
+<div class="h-16 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">16</div>
+<div class="h-16 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">17</div>
+<div class="h-16 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">18</div>
+<div class="h-16 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">19</div>
+<div class="h-16 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">20</div>
+<div class="h-16 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">21</div>
+<div class="h-16 bg-purple-600 rounded-lg flex items-center justify-center text-white font-bold relative group">
+                        22
+                        <div class="absolute -top-2 -right-2 w-3 h-3 bg-red-500 rounded-full"></div>
+<div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                            Tech Meetup
+                        </div>
+</div>
+<div class="h-16 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">23</div>
+<div class="h-16 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">24</div>
+<div class="h-16 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">25</div>
+<div class="h-16 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">26</div>
+<div class="h-16 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">27</div>
+<div class="h-16 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">28</div>
+<div class="h-16 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold relative group">
+                        29
+                        <div class="absolute -top-2 -right-2 w-3 h-3 bg-red-500 rounded-full"></div>
+<div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                            Workshop React
+                        </div>
+</div>
+<div class="h-16 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">30</div>
+<div class="h-16 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">31</div>
+</div>
+<div class="mt-6 flex flex-wrap gap-4 justify-center">
+<div class="flex items-center">
+<div class="w-4 h-4 bg-purple-600 rounded-full mr-2"></div>
+<span class="text-sm text-gray-300">Tech Meetup</span>
+</div>
+<div class="flex items-center">
+<div class="w-4 h-4 bg-blue-600 rounded-full mr-2"></div>
+<span class="text-sm text-gray-300">Workshop</span>
+</div>
+<div class="flex items-center">
+<div class="w-4 h-4 bg-yellow-600 rounded-full mr-2"></div>
+<span class="text-sm text-gray-300">Hackathon</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Past Events -->
+<section class="py-20 bg-black">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">Eventos Anteriores</h2>
+<p class="text-xl text-gray-300">Algunos de nuestros eventos más exitosos</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="enhanced-card p-6">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-gray-600 rounded-lg flex items-center justify-center mr-4">
+<i class="fas fa-code text-white"></i>
+</div>
+<div>
+<h3 class="text-lg font-semibold">Workshop JavaScript</h3>
+<p class="text-gray-400 text-sm">15 Febrero 2024</p>
+</div>
+</div>
+<p class="text-gray-300 mb-4">
+                        Aprendimos las últimas características de ES2024 y mejores prácticas 
+                        para escribir código JavaScript moderno.
+                    </p>
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 bg-gray-600 text-white text-xs rounded">Finalizado</span>
+<span class="text-sm text-gray-400">45 participantes</span>
+</div>
+</div>
+<div class="enhanced-card p-6">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-gray-600 rounded-lg flex items-center justify-center mr-4">
+<i class="fas fa-users text-white"></i>
+</div>
+<div>
+<h3 class="text-lg font-semibold">Networking Night</h3>
+<p class="text-gray-400 text-sm">8 Febrero 2024</p>
+</div>
+</div>
+<p class="text-gray-300 mb-4">
+                        Una noche increíble de networking donde los desarrolladores 
+                        se conectaron y compartieron experiencias profesionales.
+                    </p>
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 bg-gray-600 text-white text-xs rounded">Finalizado</span>
+<span class="text-sm text-gray-400">78 participantes</span>
+</div>
+</div>
+<div class="enhanced-card p-6">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-gray-600 rounded-lg flex items-center justify-center mr-4">
+<i class="fas fa-trophy text-white"></i>
+</div>
+<div>
+<h3 class="text-lg font-semibold">Hackathon Fintech</h3>
+<p class="text-gray-400 text-sm">1 Febrero 2024</p>
+</div>
+</div>
+<p class="text-gray-300 mb-4">
+                        Competencia de 48 horas enfocada en soluciones fintech. 
+                        Los equipos desarrollaron aplicaciones innovadoras.
+                    </p>
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 bg-gray-600 text-white text-xs rounded">Finalizado</span>
+<span class="text-sm text-gray-400">12 equipos</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 bg-gray-900">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="text-3xl sm:text-4xl font-bold mb-6 text-gradient">¿Quieres Organizar un Evento?</h2>
+<p class="text-xl text-gray-300 mb-8">
+                Si tienes una idea para un evento o quieres ser speaker, 
+                contáctanos y hagámoslo realidad juntos.
+            </p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<a class="modern-btn modern-btn-primary" href="contacto.html">
+<span class="btn-icon">
+<i class="fas fa-envelope"></i>
+</span>
+<span class="btn-text">Proponer Evento</span>
+<span class="btn-shine"></span>
+</a>
+<a class="modern-btn modern-btn-secondary" href="https://discord.gg/QQZmhGQncf" id="discord-cta" target="_blank">
+<span class="btn-icon">
+<i class="fab fa-discord"></i>
+</span>
+<span class="btn-text">Únete a Discord</span>
+<span class="btn-shine"></span>
+</a>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-4 gap-8">
+<div class="col-span-1 md:col-span-2">
+<h3 class="text-2xl font-bold text-purple-400 mb-4">Escuadrón 404</h3>
+<p class="text-gray-300 mb-4">
+                        Somos la comunidad de desarrolladores que transforma ideas en soluciones digitales extraordinarias. 
+                        Únete a nosotros y forma parte del futuro de la tecnología.
+                    </p>
+<div class="flex space-x-4">
+<a class="text-gray-400 hover:text-purple-400 transition-colors" href="https://discord.gg/QQZmhGQncf" target="_blank">
+<i class="fab fa-discord text-xl"></i>
+</a>
+<a class="text-gray-400 hover:text-purple-400 transition-colors" href="https://wa.me/573001234567">
+<i class="fab fa-whatsapp text-xl"></i>
+</a>
+<a class="text-gray-400 hover:text-purple-400 transition-colors" href="javascript:void(0)">
+<i class="fab fa-github text-xl"></i>
+</a>
+<a class="text-gray-400 hover:text-purple-400 transition-colors" href="javascript:void(0)">
+<i class="fab fa-linkedin text-xl"></i>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Servicios</h4>
+<ul class="space-y-2 text-gray-300">
+<li><a class="hover:text-purple-400 transition-colors" href="agencia.html">Desarrollo Web</a></li>
+<li><a class="hover:text-purple-400 transition-colors" href="agencia.html">Apps Móviles</a></li>
+<li><a class="hover:text-purple-400 transition-colors" href="agencia.html">Cloud &amp; DevOps</a></li>
+<li><a class="hover:text-purple-400 transition-colors" href="bootcamp.html">Bootcamp</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Comunidad</h4>
+<ul class="space-y-2 text-gray-300">
+<li><a class="hover:text-purple-400 transition-colors" href="comunidad.html">Sobre Nosotros</a></li>
+<li><a class="hover:text-purple-400 transition-colors" href="eventos.html">Eventos</a></li>
+<li><a class="hover:text-purple-400 transition-colors" href="proyectos.html">Proyectos</a></li>
+<li><a class="hover:text-purple-400 transition-colors" href="contacto.html">Contacto</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+<p>© 2025 Escuadrón 404. Todos los derechos reservados.</p>
+</div>
+</div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

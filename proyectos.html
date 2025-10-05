@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Proyectos - Escuadrón 404</title>
+<meta content="Portafolio de proyectos desarrollados por Escuadrón 404. Soluciones web, móviles y de infraestructura." name="description"/>
+<link href="tailwind.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body class="bg-black text-white font-mono" data-theme="dark">
+<!-- Navigation -->
+<nav class="navbar fixed w-full top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16">
+<div class="flex items-center">
+<a class="text-2xl font-bold text-gradient" href="index.html">Escuadrón 404</a>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="nav-link" href="index.html">Inicio</a>
+<a class="nav-link" href="comunidad.html">Comunidad</a>
+<a class="nav-link" href="agencia.html">Agencia</a>
+<a class="nav-link" href="bootcamp.html">Bootcamp</a>
+<a class="nav-link" href="eventos.html">Eventos</a>
+<a class="nav-link active" href="proyectos.html">Proyectos</a>
+<a class="nav-link" href="contacto.html">Contacto</a>
+</div>
+<div class="md:hidden flex items-center">
+<button class="text-white hover:text-purple-400" id="mobile-menu-btn">
+<i class="fas fa-bars text-xl"></i>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile menu -->
+<div class="hidden md:hidden bg-black border-t border-purple-500" id="mobile-menu">
+<div class="px-2 pt-2 pb-3 space-y-1">
+<a class="nav-link block px-3 py-2" href="index.html">Inicio</a>
+<a class="nav-link block px-3 py-2" href="comunidad.html">Comunidad</a>
+<a class="nav-link block px-3 py-2" href="agencia.html">Agencia</a>
+<a class="nav-link block px-3 py-2" href="bootcamp.html">Bootcamp</a>
+<a class="nav-link block px-3 py-2" href="eventos.html">Eventos</a>
+<a class="nav-link block px-3 py-2" href="proyectos.html">Proyectos</a>
+<a class="nav-link block px-3 py-2" href="contacto.html">Contacto</a>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="hero-section min-h-screen flex items-center pt-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+<div class="text-center">
+<h1 class="text-4xl sm:text-6xl font-bold mb-6 animate-slide-in-left">
+                    Nuestros <span class="text-gradient">Proyectos</span>
+</h1>
+<div class="terminal-effect text-xl sm:text-2xl mb-8 max-w-3xl mx-auto animate-fade-in">
+<div class="flex items-center justify-center mb-2">
+<span class="text-green-400 mr-2">$</span>
+<span class="text-blue-400">echo</span>
+<span class="text-white ml-2">"Soluciones digitales que transforman el mundo"</span>
+</div>
+<div class="text-sm text-gray-400">
+                        Portafolio de proyectos desarrollados con tecnología de vanguardia y metodologías ágiles
+                    </div>
+</div>
+<div class="flex flex-col sm:flex-row gap-6 justify-center mb-12 animate-bounce-in">
+<a class="modern-btn modern-btn-primary" href="#proyectos">
+<span class="btn-icon">
+<i class="fas fa-eye"></i>
+</span>
+<span class="btn-text">Ver Proyectos</span>
+<span class="btn-shine"></span>
+</a>
+<a class="modern-btn modern-btn-secondary" href="contacto.html">
+<span class="btn-icon">
+<i class="fas fa-paper-plane"></i>
+</span>
+<span class="btn-text">Tu Proyecto</span>
+<span class="btn-shine"></span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Filters Section -->
+<section class="py-20 bg-gray-900" id="proyectos">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">Portafolio de Proyectos</h2>
+<p class="text-xl text-gray-300">Explora nuestras soluciones digitales</p>
+</div>
+<!-- Filters -->
+<div class="flex justify-center mb-12">
+<div class="bg-gray-800 p-1 rounded-lg">
+<button class="proyecto-filter active px-6 py-2 rounded-md" data-filter="all">Todos</button>
+<button class="proyecto-filter px-6 py-2 rounded-md" data-filter="finalizado">Finalizados</button>
+<button class="proyecto-filter px-6 py-2 rounded-md" data-filter="proceso">En Proceso</button>
+<button class="proyecto-filter px-6 py-2 rounded-md" data-filter="web">Web</button>
+<button class="proyecto-filter px-6 py-2 rounded-md" data-filter="movil">Móvil</button>
+</div>
+</div>
+<!-- Projects Grid -->
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Project 1 -->
+<div class="proyecto-card enhanced-card" data-category="web" data-status="finalizado">
+<div class="project-image h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+<i class="fas fa-shopping-cart text-white text-4xl"></i>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-2">
+<h3 class="text-lg font-semibold">E-commerce Platform</h3>
+<span class="px-2 py-1 bg-green-500 text-white text-xs rounded">Finalizado</span>
+</div>
+<p class="text-gray-300 mb-4">
+                            Plataforma de comercio electrónico completa con carrito de compras, 
+                            pagos integrados y panel de administración.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">React</span>
+<span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">Node.js</span>
+<span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">MongoDB</span>
+<span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">Stripe</span>
+</div>
+<div class="flex justify-between items-center">
+<a class="text-purple-400 hover:text-purple-300 text-sm" href="javascript:void(0)">Ver Demo →</a>
+<a class="text-gray-400 hover:text-gray-300 text-sm" href="javascript:void(0)">Código</a>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="proyecto-card enhanced-card" data-category="movil" data-status="proceso">
+<div class="project-image h-48 bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center">
+<i class="fas fa-mobile-alt text-white text-4xl"></i>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-2">
+<h3 class="text-lg font-semibold">App Móvil Fintech</h3>
+<span class="px-2 py-1 bg-yellow-500 text-white text-xs rounded">En Proceso</span>
+</div>
+<p class="text-gray-300 mb-4">
+                            Aplicación móvil para gestión financiera personal con 
+                            análisis de gastos y metas de ahorro.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">React Native</span>
+<span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">Firebase</span>
+<span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">TypeScript</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-400 text-sm">Progreso: 75%</span>
+<div class="w-16 h-2 bg-gray-700 rounded-full">
+<div class="w-3/4 h-full bg-yellow-500 rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="proyecto-card enhanced-card" data-category="web" data-status="finalizado">
+<div class="project-image h-48 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center">
+<i class="fas fa-chart-line text-white text-4xl"></i>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-2">
+<h3 class="text-lg font-semibold">Dashboard Analytics</h3>
+<span class="px-2 py-1 bg-green-500 text-white text-xs rounded">Finalizado</span>
+</div>
+<p class="text-gray-300 mb-4">
+                            Panel de control con visualización de datos en tiempo real 
+                            y reportes automatizados para empresas.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">Vue.js</span>
+<span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">D3.js</span>
+<span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">Python</span>
+<span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">PostgreSQL</span>
+</div>
+<div class="flex justify-between items-center">
+<a class="text-purple-400 hover:text-purple-300 text-sm" href="javascript:void(0)">Ver Demo →</a>
+<a class="text-gray-400 hover:text-gray-300 text-sm" href="javascript:void(0)">Código</a>
+</div>
+</div>
+</div>
+<!-- Project 4 -->
+<div class="proyecto-card enhanced-card" data-category="web" data-status="finalizado">
+<div class="project-image h-48 bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center">
+<i class="fas fa-blog text-white text-4xl"></i>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-2">
+<h3 class="text-lg font-semibold">CMS Personalizado</h3>
+<span class="px-2 py-1 bg-green-500 text-white text-xs rounded">Finalizado</span>
+</div>
+<p class="text-gray-300 mb-4">
+                            Sistema de gestión de contenido personalizado con editor 
+                            visual y SEO optimizado.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">Next.js</span>
+<span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">Prisma</span>
+<span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">MySQL</span>
+</div>
+<div class="flex justify-between items-center">
+<a class="text-purple-400 hover:text-purple-300 text-sm" href="javascript:void(0)">Ver Demo →</a>
+<a class="text-gray-400 hover:text-gray-300 text-sm" href="javascript:void(0)">Código</a>
+</div>
+</div>
+</div>
+<!-- Project 5 -->
+<div class="proyecto-card enhanced-card" data-category="movil" data-status="proceso">
+<div class="project-image h-48 bg-gradient-to-br from-teal-500 to-blue-600 flex items-center justify-center">
+<i class="fas fa-gamepad text-white text-4xl"></i>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-2">
+<h3 class="text-lg font-semibold">Juego Móvil</h3>
+<span class="px-2 py-1 bg-yellow-500 text-white text-xs rounded">En Proceso</span>
+</div>
+<p class="text-gray-300 mb-4">
+                            Juego de puzzle móvil con mecánicas innovadoras y 
+                            sistema de logros y rankings.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">Unity</span>
+<span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">C#</span>
+<span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">Firebase</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-400 text-sm">Progreso: 60%</span>
+<div class="w-16 h-2 bg-gray-700 rounded-full">
+<div class="w-3/5 h-full bg-yellow-500 rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Project 6 -->
+<div class="proyecto-card enhanced-card" data-category="web" data-status="finalizado">
+<div class="project-image h-48 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+<i class="fas fa-cloud text-white text-4xl"></i>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-2">
+<h3 class="text-lg font-semibold">Plataforma Cloud</h3>
+<span class="px-2 py-1 bg-green-500 text-white text-xs rounded">Finalizado</span>
+</div>
+<p class="text-gray-300 mb-4">
+                            Plataforma de servicios en la nube con auto-escalado 
+                            y monitoreo en tiempo real.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">Docker</span>
+<span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">Kubernetes</span>
+<span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">AWS</span>
+<span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">Terraform</span>
+</div>
+<div class="flex justify-between items-center">
+<a class="text-purple-400 hover:text-purple-300 text-sm" href="javascript:void(0)">Ver Demo →</a>
+<a class="text-gray-400 hover:text-gray-300 text-sm" href="javascript:void(0)">Código</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="py-20 bg-black">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">Nuestros Números</h2>
+<p class="text-xl text-gray-300">Proyectos que hablan por sí solos</p>
+</div>
+<div class="grid md:grid-cols-4 gap-8">
+<div class="enhanced-card text-center p-6">
+<div class="w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+<i class="fas fa-project-diagram text-white text-2xl"></i>
+</div>
+<h3 class="text-3xl font-bold text-purple-400 mb-2">50+</h3>
+<p class="text-gray-300">Proyectos Completados</p>
+</div>
+<div class="enhanced-card text-center p-6">
+<div class="w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+<i class="fas fa-users text-white text-2xl"></i>
+</div>
+<h3 class="text-3xl font-bold text-purple-400 mb-2">30+</h3>
+<p class="text-gray-300">Clientes Satisfechos</p>
+</div>
+<div class="enhanced-card text-center p-6">
+<div class="w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+<i class="fas fa-star text-white text-2xl"></i>
+</div>
+<h3 class="text-3xl font-bold text-purple-400 mb-2">4.9/5</h3>
+<p class="text-gray-300">Calificación Promedio</p>
+</div>
+<div class="enhanced-card text-center p-6">
+<div class="w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+<i class="fas fa-clock text-white text-2xl"></i>
+</div>
+<h3 class="text-3xl font-bold text-purple-400 mb-2">100%</h3>
+<p class="text-gray-300">Entregas a Tiempo</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="py-20 bg-gray-900">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">Nuestro Proceso</h2>
+<p class="text-xl text-gray-300">Metodología probada para resultados excepcionales</p>
+</div>
+<div class="grid md:grid-cols-4 gap-8">
+<div class="text-center">
+<div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="text-white text-xl font-bold">1</span>
+</div>
+<h3 class="text-lg font-semibold mb-2">Análisis</h3>
+<p class="text-gray-300 text-sm">Estudiamos tus necesidades y definimos los requerimientos del proyecto.</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="text-white text-xl font-bold">2</span>
+</div>
+<h3 class="text-lg font-semibold mb-2">Diseño</h3>
+<p class="text-gray-300 text-sm">Creamos wireframes, prototipos y definimos la arquitectura técnica.</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="text-white text-xl font-bold">3</span>
+</div>
+<h3 class="text-lg font-semibold mb-2">Desarrollo</h3>
+<p class="text-gray-300 text-sm">Construimos tu solución con metodologías ágiles y feedback continuo.</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="text-white text-xl font-bold">4</span>
+</div>
+<h3 class="text-lg font-semibold mb-2">Entrega</h3>
+<p class="text-gray-300 text-sm">Lanzamos tu proyecto y brindamos soporte post-lanzamiento.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 bg-black">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="text-3xl sm:text-4xl font-bold mb-6 text-gradient">¿Tienes un Proyecto en Mente?</h2>
+<p class="text-xl text-gray-300 mb-8">
+                Transformemos tu idea en una solución digital innovadora. 
+                Contáctanos para una consulta gratuita.
+            </p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<a class="modern-btn modern-btn-primary" href="contacto.html">
+<span class="btn-icon">
+<i class="fas fa-paper-plane"></i>
+</span>
+<span class="btn-text">Iniciar Proyecto</span>
+<span class="btn-shine"></span>
+</a>
+<a class="modern-btn modern-btn-secondary" href="https://wa.me/573001234567">
+<span class="btn-icon">
+<i class="fab fa-whatsapp"></i>
+</span>
+<span class="btn-text">WhatsApp</span>
+<span class="btn-shine"></span>
+</a>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-4 gap-8">
+<div class="col-span-1 md:col-span-2">
+<h3 class="text-2xl font-bold text-purple-400 mb-4">Escuadrón 404</h3>
+<p class="text-gray-300 mb-4">
+                        Somos la comunidad de desarrolladores que transforma ideas en soluciones digitales extraordinarias. 
+                        Únete a nosotros y forma parte del futuro de la tecnología.
+                    </p>
+<div class="flex space-x-4">
+<a class="text-gray-400 hover:text-purple-400 transition-colors" href="https://discord.gg/QQZmhGQncf" target="_blank">
+<i class="fab fa-discord text-xl"></i>
+</a>
+<a class="text-gray-400 hover:text-purple-400 transition-colors" href="https://wa.me/573001234567">
+<i class="fab fa-whatsapp text-xl"></i>
+</a>
+<a class="text-gray-400 hover:text-purple-400 transition-colors" href="javascript:void(0)">
+<i class="fab fa-github text-xl"></i>
+</a>
+<a class="text-gray-400 hover:text-purple-400 transition-colors" href="javascript:void(0)">
+<i class="fab fa-linkedin text-xl"></i>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Servicios</h4>
+<ul class="space-y-2 text-gray-300">
+<li><a class="hover:text-purple-400 transition-colors" href="agencia.html">Desarrollo Web</a></li>
+<li><a class="hover:text-purple-400 transition-colors" href="agencia.html">Apps Móviles</a></li>
+<li><a class="hover:text-purple-400 transition-colors" href="agencia.html">Cloud &amp; DevOps</a></li>
+<li><a class="hover:text-purple-400 transition-colors" href="bootcamp.html">Bootcamp</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Comunidad</h4>
+<ul class="space-y-2 text-gray-300">
+<li><a class="hover:text-purple-400 transition-colors" href="comunidad.html">Sobre Nosotros</a></li>
+<li><a class="hover:text-purple-400 transition-colors" href="eventos.html">Eventos</a></li>
+<li><a class="hover:text-purple-400 transition-colors" href="proyectos.html">Proyectos</a></li>
+<li><a class="hover:text-purple-400 transition-colors" href="contacto.html">Contacto</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+<p>© 2025 Escuadrón 404. Todos los derechos reservados.</p>
+</div>
+</div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Agencia Digital - Escuadrón 404</title>
+<meta content="Servicios profesionales de desarrollo web, apps móviles y cloud. Soluciones digitales innovadoras para tu empresa." name="description"/>
+<link href="tailwind.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body class="bg-black text-white font-mono" data-theme="dark">
+<!-- Navigation -->
+<nav class="navbar fixed w-full top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16">
+<div class="flex items-center">
+<a class="text-2xl font-bold text-gradient" href="index.html">Escuadrón 404</a>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="nav-link" href="index.html">Inicio</a>
+<a class="nav-link" href="comunidad.html">Comunidad</a>
+<a class="nav-link active" href="agencia.html">Agencia</a>
+<a class="nav-link" href="bootcamp.html">Bootcamp</a>
+<a class="nav-link" href="eventos.html">Eventos</a>
+<a class="nav-link" href="proyectos.html">Proyectos</a>
+<a class="nav-link" href="contacto.html">Contacto</a>
+</div>
+<div class="md:hidden flex items-center">
+<button class="text-white hover:text-purple-400" id="mobile-menu-btn">
+<i class="fas fa-bars text-xl"></i>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile menu -->
+<div class="hidden md:hidden bg-black border-t border-purple-500" id="mobile-menu">
+<div class="px-2 pt-2 pb-3 space-y-1">
+<a class="nav-link block px-3 py-2" href="index.html">Inicio</a>
+<a class="nav-link block px-3 py-2" href="comunidad.html">Comunidad</a>
+<a class="nav-link block px-3 py-2" href="agencia.html">Agencia</a>
+<a class="nav-link block px-3 py-2" href="bootcamp.html">Bootcamp</a>
+<a class="nav-link block px-3 py-2" href="eventos.html">Eventos</a>
+<a class="nav-link block px-3 py-2" href="proyectos.html">Proyectos</a>
+<a class="nav-link block px-3 py-2" href="contacto.html">Contacto</a>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="hero-section min-h-screen flex items-center pt-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+<div class="text-center">
+<h1 class="text-4xl sm:text-6xl font-bold mb-6 animate-slide-in-left">
+                    Agencia <span class="text-gradient">Digital</span>
+</h1>
+<div class="terminal-effect text-xl sm:text-2xl mb-8 max-w-3xl mx-auto animate-fade-in">
+<div class="flex items-center justify-center mb-2">
+<span class="text-green-400 mr-2">$</span>
+<span class="text-blue-400">echo</span>
+<span class="text-white ml-2">"Soluciones digitales extraordinarias para tu empresa"</span>
+</div>
+<div class="text-sm text-gray-400">
+                        Transformamos ideas en productos digitales innovadores con tecnología de vanguardia
+                    </div>
+</div>
+<div class="flex flex-col sm:flex-row gap-6 justify-center mb-12 animate-bounce-in">
+<a class="modern-btn modern-btn-primary" href="contacto.html">
+<span class="btn-icon">
+<i class="fas fa-paper-plane"></i>
+</span>
+<span class="btn-text">Solicitar Cotización</span>
+<span class="btn-shine"></span>
+</a>
+<a class="modern-btn modern-btn-secondary" href="proyectos.html">
+<span class="btn-icon">
+<i class="fas fa-eye"></i>
+</span>
+<span class="btn-text">Ver Proyectos</span>
+<span class="btn-shine"></span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-20 bg-gray-900">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">Nuestros Servicios</h2>
+<p class="text-xl text-gray-300">Soluciones completas para el mundo digital</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="enhanced-card p-8 text-center">
+<div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-6 flex items-center justify-center">
+<i class="fas fa-laptop-code text-white text-3xl"></i>
+</div>
+<h3 class="text-2xl font-bold mb-4">Desarrollo Web</h3>
+<p class="text-gray-300 mb-6">
+                        Sitios web modernos, aplicaciones web y plataformas de e-commerce 
+                        construidas con las últimas tecnologías.
+                    </p>
+<ul class="text-left text-gray-300 space-y-2">
+<li><i class="fas fa-check text-green-400 mr-2"></i>React, Vue.js, Angular</li>
+<li><i class="fas fa-check text-green-400 mr-2"></i>Node.js, Python, PHP</li>
+<li><i class="fas fa-check text-green-400 mr-2"></i>E-commerce personalizado</li>
+<li><i class="fas fa-check text-green-400 mr-2"></i>APIs REST y GraphQL</li>
+</ul>
+</div>
+<div class="enhanced-card p-8 text-center">
+<div class="w-20 h-20 bg-gradient-to-r from-green-500 to-purple-500 rounded-full mx-auto mb-6 flex items-center justify-center">
+<i class="fas fa-mobile-alt text-white text-3xl"></i>
+</div>
+<h3 class="text-2xl font-bold mb-4">Apps Móviles</h3>
+<p class="text-gray-300 mb-6">
+                        Aplicaciones nativas e híbridas para iOS y Android que ofrecen 
+                        experiencias de usuario excepcionales.
+                    </p>
+<ul class="text-left text-gray-300 space-y-2">
+<li><i class="fas fa-check text-green-400 mr-2"></i>React Native, Flutter</li>
+<li><i class="fas fa-check text-green-400 mr-2"></i>iOS (Swift) y Android (Kotlin)</li>
+<li><i class="fas fa-check text-green-400 mr-2"></i>Apps híbridas multiplataforma</li>
+<li><i class="fas fa-check text-green-400 mr-2"></i>Integración con APIs</li>
+</ul>
+</div>
+<div class="enhanced-card p-8 text-center">
+<div class="w-20 h-20 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full mx-auto mb-6 flex items-center justify-center">
+<i class="fas fa-cloud text-white text-3xl"></i>
+</div>
+<h3 class="text-2xl font-bold mb-4">Cloud &amp; DevOps</h3>
+<p class="text-gray-300 mb-6">
+                        Infraestructura en la nube, automatización y despliegue continuo 
+                        para aplicaciones escalables y seguras.
+                    </p>
+<ul class="text-left text-gray-300 space-y-2">
+<li><i class="fas fa-check text-green-400 mr-2"></i>AWS, Google Cloud, Azure</li>
+<li><i class="fas fa-check text-green-400 mr-2"></i>Docker y Kubernetes</li>
+<li><i class="fas fa-check text-green-400 mr-2"></i>CI/CD automatizado</li>
+<li><i class="fas fa-check text-green-400 mr-2"></i>Monitoreo y seguridad</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="py-20 bg-black">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">Nuestro Proceso</h2>
+<p class="text-xl text-gray-300">Metodología probada para resultados excepcionales</p>
+</div>
+<div class="grid md:grid-cols-4 gap-8">
+<div class="text-center">
+<div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="text-white text-xl font-bold">1</span>
+</div>
+<h3 class="text-lg font-semibold mb-2">Consulta Inicial</h3>
+<p class="text-gray-300 text-sm">Analizamos tus necesidades y objetivos para entender el proyecto.</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="text-white text-xl font-bold">2</span>
+</div>
+<h3 class="text-lg font-semibold mb-2">Propuesta Técnica</h3>
+<p class="text-gray-300 text-sm">Diseñamos la arquitectura y presentamos la propuesta detallada.</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="text-white text-xl font-bold">3</span>
+</div>
+<h3 class="text-lg font-semibold mb-2">Desarrollo</h3>
+<p class="text-gray-300 text-sm">Construimos tu solución con seguimiento continuo y feedback.</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="text-white text-xl font-bold">4</span>
+</div>
+<h3 class="text-lg font-semibold mb-2">Entrega y Soporte</h3>
+<p class="text-gray-300 text-sm">Lanzamos tu proyecto y brindamos soporte post-lanzamiento.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Team Section -->
+<section class="py-20 bg-gray-900">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">Nuestro Talento</h2>
+<p class="text-xl text-gray-300">Desarrolladores expertos con años de experiencia</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="enhanced-card text-center p-8">
+<div class="w-24 h-24 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
+<span class="text-white font-bold text-2xl">MA</span>
+</div>
+<h4 class="text-xl font-semibold mb-2">María Alejandra</h4>
+<p class="text-purple-400 mb-4">Senior Frontend Developer</p>
+<p class="text-gray-300 mb-4">
+                        Especialista en React y Vue.js con 5 años de experiencia en desarrollo de interfaces de usuario.
+                    </p>
+<div class="flex flex-wrap justify-center gap-2">
+<span class="px-3 py-1 bg-gray-700 text-gray-300 text-sm rounded">React</span>
+<span class="px-3 py-1 bg-gray-700 text-gray-300 text-sm rounded">Vue.js</span>
+<span class="px-3 py-1 bg-gray-700 text-gray-300 text-sm rounded">TypeScript</span>
+</div>
+</div>
+<div class="enhanced-card text-center p-8">
+<div class="w-24 h-24 bg-gradient-to-r from-green-500 to-purple-500 rounded-full mx-auto mb-6 flex items-center justify-center">
+<span class="text-white font-bold text-2xl">CR</span>
+</div>
+<h4 class="text-xl font-semibold mb-2">Carlos Rodríguez</h4>
+<p class="text-purple-400 mb-4">Senior Backend Developer</p>
+<p class="text-gray-300 mb-4">
+                        Experto en Node.js y Python con arquitecturas escalables y microservicios.
+                    </p>
+<div class="flex flex-wrap justify-center gap-2">
+<span class="px-3 py-1 bg-gray-700 text-gray-300 text-sm rounded">Node.js</span>
+<span class="px-3 py-1 bg-gray-700 text-gray-300 text-sm rounded">Python</span>
+<span class="px-3 py-1 bg-gray-700 text-gray-300 text-sm rounded">PostgreSQL</span>
+</div>
+</div>
+<div class="enhanced-card text-center p-8">
+<div class="w-24 h-24 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full mx-auto mb-6 flex items-center justify-center">
+<span class="text-white font-bold text-2xl">LS</span>
+</div>
+<h4 class="text-xl font-semibold mb-2">Laura Sánchez</h4>
+<p class="text-purple-400 mb-4">Full Stack Developer</p>
+<p class="text-gray-300 mb-4">
+                        Desarrolladora full-stack con experiencia en startups y aplicaciones móviles.
+                    </p>
+<div class="flex flex-wrap justify-center gap-2">
+<span class="px-3 py-1 bg-gray-700 text-gray-300 text-sm rounded">React Native</span>
+<span class="px-3 py-1 bg-gray-700 text-gray-300 text-sm rounded">MongoDB</span>
+<span class="px-3 py-1 bg-gray-700 text-gray-300 text-sm rounded">AWS</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technologies Section -->
+<section class="py-20 bg-black">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">Tecnologías</h2>
+<p class="text-xl text-gray-300">Stack tecnológico de vanguardia</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+<div class="enhanced-card p-4 text-center">
+<i class="fab fa-react text-4xl text-blue-400 mb-2"></i>
+<p class="text-sm text-gray-300">React</p>
+</div>
+<div class="enhanced-card p-4 text-center">
+<i class="fab fa-vuejs text-4xl text-green-400 mb-2"></i>
+<p class="text-sm text-gray-300">Vue.js</p>
+</div>
+<div class="enhanced-card p-4 text-center">
+<i class="fab fa-node-js text-4xl text-green-500 mb-2"></i>
+<p class="text-sm text-gray-300">Node.js</p>
+</div>
+<div class="enhanced-card p-4 text-center">
+<i class="fab fa-python text-4xl text-yellow-400 mb-2"></i>
+<p class="text-sm text-gray-300">Python</p>
+</div>
+<div class="enhanced-card p-4 text-center">
+<i class="fab fa-aws text-4xl text-orange-400 mb-2"></i>
+<p class="text-sm text-gray-300">AWS</p>
+</div>
+<div class="enhanced-card p-4 text-center">
+<i class="fab fa-docker text-4xl text-blue-300 mb-2"></i>
+<p class="text-sm text-gray-300">Docker</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 bg-gray-900">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="text-3xl sm:text-4xl font-bold mb-6 text-gradient">¿Tienes un Proyecto en Mente?</h2>
+<p class="text-xl text-gray-300 mb-8">
+                Transformemos tu idea en una solución digital innovadora. 
+                Contáctanos para una consulta gratuita.
+            </p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<a class="modern-btn modern-btn-primary" href="contacto.html">
+<span class="btn-icon">
+<i class="fas fa-paper-plane"></i>
+</span>
+<span class="btn-text">Solicitar Cotización</span>
+<span class="btn-shine"></span>
+</a>
+<a class="modern-btn modern-btn-secondary" href="https://wa.me/573001234567">
+<span class="btn-icon">
+<i class="fab fa-whatsapp"></i>
+</span>
+<span class="btn-text">WhatsApp</span>
+<span class="btn-shine"></span>
+</a>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-4 gap-8">
+<div class="col-span-1 md:col-span-2">
+<h3 class="text-2xl font-bold text-purple-400 mb-4">Escuadrón 404</h3>
+<p class="text-gray-300 mb-4">
+                        Somos la comunidad de desarrolladores que transforma ideas en soluciones digitales extraordinarias. 
+                        Únete a nosotros y forma parte del futuro de la tecnología.
+                    </p>
+<div class="flex space-x-4">
+<a class="text-gray-400 hover:text-purple-400 transition-colors" href="https://discord.gg/QQZmhGQncf" target="_blank">
+<i class="fab fa-discord text-xl"></i>
+</a>
+<a class="text-gray-400 hover:text-purple-400 transition-colors" href="https://wa.me/573001234567">
+<i class="fab fa-whatsapp text-xl"></i>
+</a>
+<a class="text-gray-400 hover:text-purple-400 transition-colors" href="javascript:void(0)">
+<i class="fab fa-github text-xl"></i>
+</a>
+<a class="text-gray-400 hover:text-purple-400 transition-colors" href="javascript:void(0)">
+<i class="fab fa-linkedin text-xl"></i>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Servicios</h4>
+<ul class="space-y-2 text-gray-300">
+<li><a class="hover:text-purple-400 transition-colors" href="agencia.html">Desarrollo Web</a></li>
+<li><a class="hover:text-purple-400 transition-colors" href="agencia.html">Apps Móviles</a></li>
+<li><a class="hover:text-purple-400 transition-colors" href="agencia.html">Cloud &amp; DevOps</a></li>
+<li><a class="hover:text-purple-400 transition-colors" href="bootcamp.html">Bootcamp</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Comunidad</h4>
+<ul class="space-y-2 text-gray-300">
+<li><a class="hover:text-purple-400 transition-colors" href="comunidad.html">Sobre Nosotros</a></li>
+<li><a class="hover:text-purple-400 transition-colors" href="eventos.html">Eventos</a></li>
+<li><a class="hover:text-purple-400 transition-colors" href="proyectos.html">Proyectos</a></li>
+<li><a class="hover:text-purple-400 transition-colors" href="contacto.html">Contacto</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+<p>© 2025 Escuadrón 404. Todos los derechos reservados.</p>
+</div>
+</div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

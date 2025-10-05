@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escuadrón 404 - Demo Retro 90s/NES Style</title>
+    <link href="tailwind.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body class="bg-black text-white font-mono scanlines" data-theme="dark">
+
+    <!-- Demo Header -->
+    <header class="py-8 text-center">
+        <h1 class="nes-title text-4xl mb-4 glitch" data-text="Escuadrón 404 Retro Demo">
+            Escuadrón 404 Retro Demo
+        </h1>
+        <p class="nes-text text-xl">Demostración del nuevo estilo retro 90s/NES</p>
+    </header>
+
+    <!-- NES Components Demo -->
+    <main class="max-w-4xl mx-auto p-6 space-y-8">
+        
+        <!-- Buttons Section -->
+        <section class="nes-container dark">
+            <h2 class="nes-title text-2xl mb-6">Botones NES Style</h2>
+            <div class="flex flex-wrap gap-4">
+                <a href="#" class="btn-primary">
+                    <i class="fas fa-play"></i>
+                    <span>Jugar</span>
+                </a>
+                <a href="#" class="btn-secondary">
+                    <i class="fas fa-cog"></i>
+                    <span>Configuración</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Cards Section -->
+        <section class="nes-container dark">
+            <h2 class="nes-title text-2xl mb-6">Tarjetas Retro</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="enhanced-card p-6">
+                    <h3 class="nes-title text-lg mb-3">Proyecto Retro</h3>
+                    <p class="nes-text mb-4">Un proyecto con estilo de los 90s</p>
+                    <div class="flex gap-2">
+                        <span class="nes-badge">HTML</span>
+                        <span class="nes-badge success">CSS</span>
+                        <span class="nes-badge info">JS</span>
+                    </div>
+                </div>
+                <div class="enhanced-card p-6">
+                    <h3 class="nes-title text-lg mb-3">Game Dev</h3>
+                    <p class="nes-text mb-4">Desarrollo de videojuegos retro</p>
+                    <div class="flex gap-2">
+                        <span class="nes-badge warning">Unity</span>
+                        <span class="nes-badge">C#</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Terminal Demo -->
+        <section class="nes-container dark">
+            <h2 class="nes-title text-2xl mb-6">Terminal Retro</h2>
+            <div class="terminal-effect">
+                <div class="flex items-center mb-2">
+                    <span class="text-green-400 mr-2">C:\USERS\DEV></span>
+                    <span class="text-white">dir</span>
+                    <span class="terminal-cursor"></span>
+                </div>
+                <div class="text-green-400 text-sm">
+                    <div>Volume in drive C has no label.</div>
+                    <div>Directory of C:\USERS\DEV</div>
+                    <div class="mt-2">
+                        <div>08/11/2025  10:30 AM    &lt;DIR&gt;          .</div>
+                        <div>08/11/2025  10:30 AM    &lt;DIR&gt;          ..</div>
+                        <div>08/11/2025  02:15 PM         1,234 proyecto.html</div>
+                        <div>08/11/2025  02:15 PM         5,678 style.css</div>
+                        <div>08/11/2025  02:15 PM         9,012 main.js</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Bar Demo -->
+        <section class="nes-container dark">
+            <h2 class="nes-title text-2xl mb-6">Progress Bars</h2>
+            <div class="space-y-4">
+                <div>
+                    <p class="nes-text mb-2">Loading...</p>
+                    <div class="nes-progress">
+                        <div class="nes-progress-bar" style="width: 65%"></div>
+                    </div>
+                </div>
+                <div>
+                    <p class="nes-text mb-2">Experience Points</p>
+                    <div class="nes-progress">
+                        <div class="nes-progress-bar" style="width: 85%; background: var(--nes-yellow);"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Input Demo -->
+        <section class="nes-container dark">
+            <h2 class="nes-title text-2xl mb-6">Formularios Retro</h2>
+            <form class="space-y-4">
+                <div>
+                    <label class="nes-text block mb-2">Player Name:</label>
+                    <input type="text" class="nes-input dark w-full" placeholder="Enter your name">
+                </div>
+                <div>
+                    <label class="nes-text block mb-2">High Score:</label>
+                    <input type="number" class="nes-input dark w-full" value="999999" readonly>
+                </div>
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-save"></i>
+                    <span>Save Game</span>
+                </button>
+            </form>
+        </section>
+
+        <!-- Dialog Demo -->
+        <section class="nes-container dark">
+            <h2 class="nes-title text-2xl mb-6">Dialog Boxes</h2>
+            <div class="nes-dialog dark">
+                <p class="nes-text">
+                    ¡Bienvenido al mundo retro de Escuadrón 404! 
+                    Tu aventura en el desarrollo web está a punto de comenzar.
+                </p>
+                <div class="mt-4 flex gap-2">
+                    <button class="btn-primary">
+                        <i class="fas fa-check"></i>
+                        <span>Continue</span>
+                    </button>
+                    <button class="btn-secondary">
+                        <i class="fas fa-times"></i>
+                        <span>Cancel</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Glitch Text Demo -->
+        <section class="nes-container dark">
+            <h2 class="nes-title text-2xl mb-6">Efectos Especiales</h2>
+            <div class="text-center space-y-4">
+                <h3 class="glitch text-3xl" data-text="GLITCH EFFECT">GLITCH EFFECT</h3>
+                <p class="nes-text">Texto con efecto de interferencia retro</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-8 mt-12">
+        <div class="nes-container dark inline-block">
+            <p class="nes-text">
+                © 2025 Escuadrón 404 - Powered by Retro Style
+            </p>
+            <div class="flex justify-center gap-4 mt-4">
+                <a href="index.html" class="btn-secondary">
+                    <i class="fas fa-home"></i>
+                    <span>Volver al inicio</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add some interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate progress bars
+            const progressBars = document.querySelectorAll('.nes-progress-bar');
+            progressBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0%';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 500);
+            });
+
+            // Add click sound effect (visual feedback)
+            const buttons = document.querySelectorAll('.btn-primary, .btn-secondary');
+            buttons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    this.style.transform = 'translate(4px, 4px)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 100);
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
