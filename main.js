@@ -475,3 +475,172 @@ window.Escuadron404 = {
     showMessage,
     CONFIG
 };
+
+// ===== INTERACTIVE CALENDAR COMPONENT =====
+class ProjectCalendar {
+    constructor() {
+        this.currentDate = new Date();
+        this.currentMonth = this.currentDate.getMonth();
+        this.currentYear = this.currentDate.getFullYear();
+        this.selectedDate = null;
+        
+        // Sample event calendar (workshops, meetups, hackathons)
+        this.events = {
+            '2025-10-10': { type: 'workshop', title: 'Workshop: React Avanzado' },
+            '2025-10-15': { type: 'has-event', title: 'Tech Meetup' },
+            '2025-10-20': { type: 'meetup', title: 'Networking Night' },
+            '2025-10-25': { type: 'has-event', title: 'Hackathon Fintech' },
+            '2025-11-5': { type: 'workshop', title: 'Workshop: Node.js' },
+            '2025-11-12': { type: 'meetup', title: 'Coffee & Code' },
+            '2025-11-18': { type: 'has-event', title: 'Tech Talk: IA' },
+            '2025-11-27': { type: 'workshop', title: 'Workshop: Python' },
+            '2025-12-10': { type: 'has-event', title: 'Conferencia Anual' },
+            '2025-12-15': { type: 'meetup', title: 'Cierre de Año' }
+        };
+        
+        this.monthNames = [
+            'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+            'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
+        ];
+        
+        this.init();
+    }
+    
+    init() {
+        // Check if calendar elements exist
+        const calendarDays = document.getElementById('calendarDays');
+        if (!calendarDays) return;
+        
+        this.calendarDays = calendarDays;
+        this.currentMonthElement = document.getElementById('currentMonth');
+        this.prevMonthBtn = document.getElementById('prevMonth');
+        this.nextMonthBtn = document.getElementById('nextMonth');
+        
+        // Event listeners
+        this.prevMonthBtn.addEventListener('click', () => this.previousMonth());
+        this.nextMonthBtn.addEventListener('click', () => this.nextMonth());
+        
+        // Render initial calendar
+        this.renderCalendar();
+    }
+    
+    renderCalendar() {
+        // Clear previous days
+        this.calendarDays.innerHTML = '';
+        
+        // Update month/year display (capitalize for vintage style)
+        this.currentMonthElement.textContent = `${this.monthNames[this.currentMonth]} ${this.currentYear}`;
+        
+        // Get first day of month and number of days
+        const firstDay = new Date(this.currentYear, this.currentMonth, 1).getDay();
+        const daysInMonth = new Date(this.currentYear, this.currentMonth + 1, 0).getDate();
+        const daysInPrevMonth = new Date(this.currentYear, this.currentMonth, 0).getDate();
+        
+        // Add previous month's trailing days
+        for (let i = firstDay - 1; i >= 0; i--) {
+            const day = daysInPrevMonth - i;
+            const dayElement = this.createDayElement(day, 'other-month');
+            this.calendarDays.appendChild(dayElement);
+        }
+        
+        // Add current month's days
+        for (let day = 1; day <= daysInMonth; day++) {
+            const dayElement = this.createDayElement(day, 'current-month');
+            
+            // Check if it's today
+            const today = new Date();
+            if (day === today.getDate() && 
+                this.currentMonth === today.getMonth() && 
+                this.currentYear === today.getFullYear()) {
+                dayElement.classList.add('today');
+            }
+            
+            // Check for events
+            const eventKey = `${this.currentYear}-${this.currentMonth + 1}-${day}`;
+            if (this.events[eventKey]) {
+                dayElement.classList.add(this.events[eventKey].type);
+                dayElement.title = this.events[eventKey].title;
+            }
+            
+            this.calendarDays.appendChild(dayElement);
+        }
+        
+        // Add next month's leading days
+        const totalCells = this.calendarDays.children.length;
+        const remainingCells = 42 - totalCells; // 6 rows × 7 days
+        
+        for (let day = 1; day <= remainingCells; day++) {
+            const dayElement = this.createDayElement(day, 'other-month');
+            this.calendarDays.appendChild(dayElement);
+        }
+    }
+    
+    createDayElement(day, monthType) {
+        const dayElement = document.createElement('div');
+        dayElement.className = 'calendar-day';
+        dayElement.textContent = day;
+        
+        if (monthType === 'other-month') {
+            dayElement.classList.add('other-month');
+        }
+        
+        // Add click event
+        dayElement.addEventListener('click', () => {
+            this.selectDate(day, monthType);
+        });
+        
+        return dayElement;
+    }
+    
+    selectDate(day, monthType) {
+        // Remove previous selection
+        document.querySelectorAll('.calendar-day').forEach(el => {
+            el.classList.remove('selected');
+        });
+        
+        // Add selection to clicked day
+        event.target.classList.add('selected');
+        
+        // Store selected date
+        if (monthType === 'current-month') {
+            this.selectedDate = new Date(this.currentYear, this.currentMonth, day);
+            console.log('Selected date:', this.selectedDate.toLocaleDateString('es-ES'));
+        }
+    }
+    
+    previousMonth() {
+        this.currentMonth--;
+        if (this.currentMonth < 0) {
+            this.currentMonth = 11;
+            this.currentYear--;
+        }
+        this.renderCalendar();
+    }
+    
+    nextMonth() {
+        this.currentMonth++;
+        if (this.currentMonth > 11) {
+            this.currentMonth = 0;
+            this.currentYear++;
+        }
+        this.renderCalendar();
+    }
+    
+    // Public method to add events
+    addEvent(date, type, title) {
+        const eventKey = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+        this.events[eventKey] = { type, title };
+        this.renderCalendar();
+    }
+}
+
+// Initialize calendar when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if we're on a page with calendar
+    if (document.getElementById('calendarDays')) {
+        const calendar = new ProjectCalendar();
+        
+        // Make calendar accessible globally
+        window.projectCalendar = calendar;
+    }
+});

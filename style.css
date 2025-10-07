@@ -1086,3 +1086,399 @@ input:focus, textarea:focus, select:focus {
     transform: translateY(-2px) scale(1.01);
   }
 }
+
+/* ===== VINTAGE CALENDAR COMPONENT (CLEAN RETRO STYLE) ===== */
+.retro-calendar-container {
+  max-width: 100%;
+  background: #000000;
+  border: 6px solid #8b5cf6;
+  border-radius: 0;
+  box-shadow: 
+    8px 8px 0px #1a0f2e,
+    16px 16px 0px rgba(139, 92, 246, 0.3),
+    0 0 40px rgba(139, 92, 246, 0.4);
+  padding: 2rem;
+  position: relative;
+}
+
+.retro-calendar-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: repeating-linear-gradient(
+    90deg,
+    #8b5cf6 0px,
+    #8b5cf6 10px,
+    #a78bfa 10px,
+    #a78bfa 20px,
+    #c084fc 20px,
+    #c084fc 30px
+  );
+  animation: retro-scan 2s linear infinite;
+}
+
+@keyframes retro-scan {
+  0% { background-position: 0 0; }
+  100% { background-position: 30px 0; }
+}
+
+.retro-calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.retro-nav-btn {
+  background: #8b5cf6;
+  color: #000;
+  border: 4px solid #000;
+  border-radius: 0;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 900;
+  box-shadow: 
+    4px 4px 0px #000,
+    inset -2px -2px 0px rgba(0, 0, 0, 0.5),
+    inset 2px 2px 0px rgba(255, 255, 255, 0.3);
+  transition: all 0.1s ease;
+  font-family: 'Press Start 2P', monospace;
+}
+
+.retro-nav-btn:hover {
+  background: #a78bfa;
+  transform: translate(2px, 2px);
+  box-shadow: 
+    2px 2px 0px #000,
+    inset -2px -2px 0px rgba(0, 0, 0, 0.5),
+    inset 2px 2px 0px rgba(255, 255, 255, 0.3);
+}
+
+.retro-nav-btn:active {
+  transform: translate(4px, 4px);
+  box-shadow: none;
+}
+
+.retro-month-display {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.retro-screen {
+  background: #1a0f2e;
+  border: 4px solid #8b5cf6;
+  border-radius: 0;
+  padding: 1rem 2rem;
+  box-shadow: 
+    inset 0 0 20px rgba(139, 92, 246, 0.3),
+    0 0 20px rgba(139, 92, 246, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.retro-screen::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(139, 92, 246, 0.1) 2px,
+    rgba(139, 92, 246, 0.1) 4px
+  );
+  pointer-events: none;
+  animation: scanlines 0.1s linear infinite;
+}
+
+@keyframes scanlines {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(4px); }
+}
+
+.retro-month-text {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.5rem;
+  color: #a78bfa;
+  text-align: center;
+  text-shadow: 
+    2px 2px 0px #000,
+    0 0 10px #8b5cf6,
+    0 0 20px #8b5cf6;
+  letter-spacing: 3px;
+  animation: text-flicker 3s infinite;
+}
+
+@keyframes text-flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.95; }
+  51% { opacity: 1; }
+}
+
+.retro-calendar-body {
+  background: #0f0410;
+  border: 4px solid #8b5cf6;
+  padding: 1.5rem;
+  box-shadow: inset 0 0 30px rgba(139, 92, 246, 0.2);
+}
+
+.retro-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.retro-weekday {
+  text-align: center;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.65rem;
+  font-weight: 900;
+  color: #8b5cf6;
+  padding: 10px 4px;
+  background: #1a0f2e;
+  border: 3px solid #8b5cf6;
+  box-shadow: 
+    inset -2px -2px 0px rgba(0, 0, 0, 0.5),
+    inset 2px 2px 0px rgba(139, 92, 246, 0.3);
+  letter-spacing: 1px;
+}
+
+.retro-calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.calendar-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a0f2e;
+  border: 3px solid #4a2f7a;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #e6d9ff;
+  position: relative;
+  box-shadow: 
+    inset -2px -2px 0px rgba(0, 0, 0, 0.5),
+    inset 2px 2px 0px rgba(74, 47, 122, 0.3);
+}
+
+.calendar-day:hover {
+  background: #2d1b4e;
+  border-color: #8b5cf6;
+  transform: translate(-2px, -2px);
+  box-shadow: 
+    2px 2px 0px #000,
+    inset -2px -2px 0px rgba(0, 0, 0, 0.5),
+    inset 2px 2px 0px rgba(139, 92, 246, 0.5),
+    0 0 15px rgba(139, 92, 246, 0.6);
+  z-index: 10;
+}
+
+.calendar-day.other-month {
+  color: #4a2f7a;
+  background: #0a0510;
+  opacity: 0.5;
+}
+
+.calendar-day.today {
+  background: #8b5cf6;
+  border-color: #c084fc;
+  color: #000;
+  font-weight: 900;
+  box-shadow: 
+    0 0 20px #8b5cf6,
+    0 0 40px rgba(139, 92, 246, 0.6),
+    inset -2px -2px 0px rgba(0, 0, 0, 0.5),
+    inset 2px 2px 0px rgba(255, 255, 255, 0.5);
+  animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px #8b5cf6, 0 0 40px rgba(139, 92, 246, 0.6); }
+  50% { box-shadow: 0 0 30px #a78bfa, 0 0 60px rgba(167, 139, 250, 0.8); }
+}
+
+.calendar-day.has-event {
+  background: #7c3aed;
+  border-color: #a78bfa;
+  color: #fff;
+}
+
+.calendar-day.has-event::after {
+  content: '●';
+  position: absolute;
+  bottom: 2px;
+  right: 4px;
+  font-size: 0.6rem;
+  color: #c084fc;
+  text-shadow: 0 0 8px #c084fc;
+}
+
+.calendar-day.workshop {
+  background: #10b981;
+  border-color: #34d399;
+  color: #000;
+}
+
+.calendar-day.meetup {
+  background: #f59e0b;
+  border-color: #fbbf24;
+  color: #000;
+}
+
+.calendar-day.selected {
+  background: #c084fc;
+  border-color: #e879f9;
+  color: #000;
+  transform: translate(-2px, -2px) scale(1.05);
+  box-shadow: 
+    4px 4px 0px #000,
+    0 0 25px #c084fc,
+    inset -2px -2px 0px rgba(0, 0, 0, 0.5),
+    inset 2px 2px 0px rgba(255, 255, 255, 0.5);
+  z-index: 20;
+}
+
+.retro-calendar-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 4px solid #8b5cf6;
+}
+
+.retro-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.65rem;
+  color: #a78bfa;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.retro-legend-box {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #000;
+  box-shadow: 
+    2px 2px 0px #000,
+    inset -1px -1px 0px rgba(0, 0, 0, 0.5);
+}
+
+.retro-legend-box.retro-event {
+  background: #7c3aed;
+}
+
+.retro-legend-box.retro-workshop {
+  background: #10b981;
+}
+
+.retro-legend-box.retro-meetup {
+  background: #f59e0b;
+}
+
+.retro-legend-box.retro-today {
+  background: #8b5cf6;
+  box-shadow: 
+    2px 2px 0px #000,
+    0 0 10px #8b5cf6;
+}
+
+/* Retro Calendar Responsive Design */
+@media (max-width: 768px) {
+  .retro-calendar-container {
+    padding: 1rem;
+    border-width: 4px;
+    box-shadow: 
+      4px 4px 0px #1a0f2e,
+      8px 8px 0px rgba(139, 92, 246, 0.3);
+  }
+  
+  .retro-month-text {
+    font-size: 1rem;
+  }
+  
+  .retro-nav-btn {
+    padding: 10px 14px;
+    font-size: 1.2rem;
+  }
+  
+  .retro-weekday {
+    font-size: 0.55rem;
+    padding: 8px 2px;
+  }
+  
+  .calendar-day {
+    font-size: 0.7rem;
+  }
+  
+  .retro-calendar-days {
+    gap: 4px;
+  }
+  
+  .retro-weekdays {
+    gap: 4px;
+  }
+  
+  .retro-legend-item {
+    font-size: 0.55rem;
+  }
+  
+  .retro-legend-box {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .retro-calendar-container {
+    padding: 0.75rem;
+  }
+  
+  .retro-month-text {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+  }
+  
+  .retro-screen {
+    padding: 0.75rem 1rem;
+  }
+  
+  .retro-nav-btn {
+    padding: 8px 10px;
+    font-size: 1rem;
+  }
+  
+  .retro-weekday {
+    font-size: 0.5rem;
+    padding: 6px 1px;
+  }
+  
+  .calendar-day {
+    font-size: 0.65rem;
+  }
+  
+  .retro-calendar-legend {
+    gap: 1rem;
+  }
+}
