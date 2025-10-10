@@ -95,6 +95,9 @@ body {
   background-size: 100% 100%, 100% 100%, 4px 4px;
   background-attachment: fixed;
   animation: subtle-scanlines 0.1s linear infinite;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
 }
 
 @keyframes subtle-scanlines {
@@ -153,7 +156,7 @@ h1, h2, h3, h4, h5, h6 {
   100% { text-shadow: 3px 3px 0px var(--nes-black), 6px 6px 10px var(--neon-purple); }
 }
 
-/* Enhanced NES-Style Navigation */
+/* ===== ENHANCED RESPONSIVE NAVIGATION ===== */
 .navbar {
   background: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(20px);
@@ -168,6 +171,16 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Press Start 2P', monospace;
   width: 100%;
   overflow-x: hidden;
+}
+
+.navbar .max-w-7xl {
+  max-width: 100%;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.navbar .flex.justify-between {
+  gap: 0.5rem;
 }
 
 .navbar::before {
@@ -187,22 +200,47 @@ h1, h2, h3, h4, h5, h6 {
   100% { background-position: 100% 50%; }
 }
 
+/* Logo responsive */
+.navbar .text-2xl {
+  font-size: clamp(0.875rem, 2vw, 1.5rem);
+  white-space: nowrap;
+}
+
+/* Navigation Links - Base Styles */
 .nav-link {
   position: relative;
   color: var(--text-secondary);
   transition: var(--transition);
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.6rem;
   border: 2px solid transparent;
   border-radius: 0;
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.7rem;
+  letter-spacing: 1px;
+  font-size: clamp(0.5rem, 1vw, 0.65rem);
   font-family: 'Press Start 2P', monospace;
   background: var(--nes-dark-gray);
   box-shadow: 
     inset -2px -2px 0px var(--nes-black),
     inset 2px 2px 0px var(--nes-light-gray);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Desktop Navigation Container */
+.navbar .hidden.md\:flex {
+  gap: 0.4rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  max-width: calc(100vw - 300px);
+}
+
+.navbar .hidden.md\:flex::-webkit-scrollbar {
+  display: none;
 }
 
 .nav-link:hover,
@@ -1485,83 +1523,91 @@ input:focus, textarea:focus, select:focus {
   }
 }
 
-/* ===== RESPONSIVE NAVBAR IMPROVEMENTS ===== */
+/* ===== COMPREHENSIVE RESPONSIVE IMPROVEMENTS ===== */
 
-/* Prevent navbar overflow on all screen sizes */
-.navbar .max-w-7xl {
+/* Global overflow prevention */
+html {
+  overflow-x: hidden;
   width: 100%;
+}
+
+/* Container improvements */
+.max-w-7xl {
   max-width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  width: 100%;
+  padding-left: clamp(0.75rem, 2vw, 2rem);
+  padding-right: clamp(0.75rem, 2vw, 2rem);
+  overflow-x: hidden;
 }
 
-/* Desktop navigation - prevent overflow */
-@media (min-width: 768px) {
-  .navbar .hidden.md\\:flex {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
-  }
-  
-  .navbar .hidden.md\\:flex::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
-  }
-  
-  .nav-link {
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
+.container {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-/* Tablet adjustments */
-@media (max-width: 1024px) and (min-width: 768px) {
-  .nav-link {
-    font-size: 0.6rem;
-    padding: 0.4rem 0.7rem;
-    letter-spacing: 1px;
-  }
-  
-  .navbar .hidden.md\\:flex {
+/* ===== DESKTOP RESPONSIVE (≥1024px) ===== */
+@media (min-width: 1024px) {
+  .navbar .hidden.md\:flex {
     gap: 0.5rem;
   }
+  
+  .nav-link {
+    font-size: 0.65rem;
+    padding: 0.5rem 0.8rem;
+    letter-spacing: 1.5px;
+  }
 }
 
-/* Mobile menu improvements */
+/* ===== TABLET RESPONSIVE (768px - 1023px) ===== */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .navbar .hidden.md\:flex {
+    gap: 0.3rem;
+    max-width: calc(100vw - 250px);
+  }
+  
+  .nav-link {
+    font-size: 0.55rem;
+    padding: 0.4rem 0.5rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .navbar .text-2xl {
+    font-size: 1.1rem;
+  }
+  
+  /* Adjust hero sections */
+  .hero-section {
+    min-height: 80vh;
+    padding-top: 5rem;
+  }
+  
+  /* Adjust text sizes */
+  h1 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem) !important;
+  }
+  
+  h2 {
+    font-size: clamp(1.25rem, 3vw, 2rem) !important;
+  }
+  
+  h3 {
+    font-size: clamp(1rem, 2.5vw, 1.5rem) !important;
+  }
+  
+  /* Grid adjustments */
+  .grid {
+    gap: 1rem;
+  }
+}
+
+/* ===== MOBILE RESPONSIVE (≤767px) ===== */
 @media (max-width: 767px) {
   .navbar {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-  }
-  
-  #mobile-menu {
-    max-height: calc(100vh - 64px);
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  
-  #mobile-menu .nav-link {
-    font-size: 0.75rem;
-    padding: 0.75rem 1rem;
-    margin: 0.25rem 0;
-    display: block;
     width: 100%;
-  }
-  
-  /* Ensure mobile menu button is always visible */
-  .md\\:hidden {
-    display: flex !important;
-  }
-}
-
-/* Small mobile devices */
-@media (max-width: 480px) {
-  .navbar .text-2xl {
-    font-size: 1.25rem;
   }
   
   .navbar .max-w-7xl {
@@ -1569,21 +1615,937 @@ input:focus, textarea:focus, select:focus {
     padding-right: 0.75rem;
   }
   
+  .navbar .text-2xl {
+    font-size: 1rem;
+  }
+  
+  #mobile-menu {
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+  }
+  
   #mobile-menu .nav-link {
-    font-size: 0.65rem;
-    padding: 0.65rem 0.75rem;
+    font-size: 0.7rem;
+    padding: 0.75rem 1rem;
+    margin: 0.25rem 0;
+    display: block;
+    width: 100%;
+    letter-spacing: 1px;
+  }
+  
+  /* Hero sections mobile */
+  .hero-section {
+    min-height: 100vh;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+  }
+  
+  /* Text sizing mobile */
+  h1 {
+    font-size: clamp(1.25rem, 5vw, 2rem) !important;
+    line-height: 1.3 !important;
+  }
+  
+  h2 {
+    font-size: clamp(1.1rem, 4vw, 1.75rem) !important;
+    line-height: 1.4 !important;
+  }
+  
+  h3 {
+    font-size: clamp(0.9rem, 3vw, 1.25rem) !important;
+  }
+  
+  p, .text-xl {
+    font-size: clamp(0.75rem, 2.5vw, 1rem) !important;
+  }
+  
+  /* Button adjustments */
+  .modern-btn,
+  .enhanced-btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.7rem;
+  }
+  
+  /* Grid to single column */
+  .grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+  }
+  
+  /* Card spacing */
+  .enhanced-card {
+    padding: 1.25rem;
+  }
+  
+  /* Section padding */
+  section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  .py-20 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
   }
 }
 
-/* Prevent horizontal scroll on body */
-body {
-  overflow-x: hidden;
-  max-width: 100vw;
+/* ===== SMALL MOBILE (≤480px) ===== */
+@media (max-width: 480px) {
+  .navbar .text-2xl {
+    font-size: 0.85rem;
+  }
+  
+  .navbar .max-w-7xl {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  #mobile-menu .nav-link {
+    font-size: 0.6rem;
+    padding: 0.65rem 0.75rem;
+  }
+  
+  h1 {
+    font-size: clamp(1rem, 6vw, 1.5rem) !important;
+  }
+  
+  h2 {
+    font-size: clamp(0.9rem, 5vw, 1.35rem) !important;
+  }
+  
+  h3 {
+    font-size: clamp(0.8rem, 4vw, 1.1rem) !important;
+  }
+  
+  p, .text-xl, .text-lg {
+    font-size: clamp(0.65rem, 3vw, 0.85rem) !important;
+    line-height: 1.6 !important;
+  }
+  
+  .modern-btn,
+  .enhanced-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.6rem;
+  }
+  
+  .enhanced-card {
+    padding: 1rem;
+  }
+  
+  section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
 
-/* Ensure all containers respect viewport width */
-.max-w-7xl,
-.container {
+/* ===== LARGE DESKTOP (≥1440px) ===== */
+@media (min-width: 1440px) {
+  .max-w-7xl {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .nav-link {
+    font-size: 0.7rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* ===== RESPONSIVE IMAGES & MEDIA ===== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+/* ===== RESPONSIVE FORMS ===== */
+input,
+textarea,
+select {
+  max-width: 100%;
+  font-size: clamp(0.75rem, 2vw, 1rem);
+}
+
+/* ===== RESPONSIVE TABLES ===== */
+table {
+  width: 100%;
+  overflow-x: auto;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  table {
+    font-size: 0.75rem;
+  }
+}
+
+/* ===== UTILITY CLASSES FOR RESPONSIVE ===== */
+.w-full {
+  width: 100% !important;
+}
+
+.max-w-full {
+  max-width: 100% !important;
+}
+
+/* Prevent text overflow */
+.text-gradient,
+.nes-title,
+.terminal-effect {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* ===== FIX SPECIFIC TAILWIND CLASSES ===== */
+.space-x-8 {
+  gap: clamp(0.5rem, 2vw, 2rem);
+}
+
+.space-x-4 {
+  gap: clamp(0.25rem, 1vw, 1rem);
+}
+
+/* ===== RESPONSIVE FLEX CONTAINERS ===== */
+.flex {
+  flex-wrap: wrap;
+}
+
+.flex.justify-between {
+  gap: 0.5rem;
+}
+
+.flex.items-center {
+  align-items: center;
+}
+
+/* Desktop: prevent wrapping for navbar */
+@media (min-width: 768px) {
+  .navbar .flex {
+    flex-wrap: nowrap;
+  }
+}
+
+/* ===== RESPONSIVE SPACING UTILITIES ===== */
+@media (max-width: 767px) {
+  .sm\:px-6 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  .sm\:text-6xl {
+    font-size: clamp(1.5rem, 6vw, 2.5rem) !important;
+  }
+  
+  .sm\:text-4xl {
+    font-size: clamp(1.25rem, 5vw, 2rem) !important;
+  }
+  
+  .sm\:text-2xl {
+    font-size: clamp(1rem, 4vw, 1.5rem) !important;
+  }
+  
+  .mb-16 {
+    margin-bottom: 2rem !important;
+  }
+  
+  .mb-12 {
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .mb-8 {
+    margin-bottom: 1rem !important;
+  }
+}
+
+/* ===== PREVENT LAYOUT SHIFT ===== */
+* {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ===== SMOOTH RESPONSIVE TRANSITIONS ===== */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  .nav-link,
+  .modern-btn,
+  .enhanced-btn,
+  .enhanced-card {
+    transition: all 0.3s ease;
+  }
+}
+
+/* ===== CRITICAL OVERFLOW FIXES ===== */
+
+/* Force all direct children to respect container width */
+body > * {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+section {
   max-width: 100%;
   overflow-x: hidden;
+}
+
+/* Fix navbar specific issues */
+.navbar * {
+  max-width: 100%;
+}
+
+.navbar .flex.items-center {
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+
+.navbar .flex.items-center > * {
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+/* Ensure logo doesn't overflow */
+.navbar a[href="index.html"] {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 200px;
+}
+
+/* Desktop nav container strict width control */
+@media (min-width: 768px) {
+  .navbar .hidden.md\:flex {
+    max-width: 100%;
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+/* ===== GRID RESPONSIVE FIXES ===== */
+
+/* Force grids to respect container on all screens */
+.grid {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Tablet: 2 columns max */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .grid.lg\:grid-cols-3,
+  .grid.lg\:grid-cols-4,
+  .grid.md\:grid-cols-3,
+  .grid.md\:grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Mobile: always 1 column */
+@media (max-width: 767px) {
+  .grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  
+  .grid > * {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* ===== FLEX LAYOUT FIXES ===== */
+
+/* Stack flex items on mobile */
+@media (max-width: 767px) {
+  .flex:not(.navbar .flex) {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  
+  .flex.justify-between:not(.navbar .flex) {
+    align-items: center;
+  }
+  
+  /* Keep certain flex rows horizontal */
+  .flex.items-center.gap-2,
+  .flex.items-center.gap-4 {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+  }
+}
+
+/* ===== IMAGE & MEDIA STRICT CONTROLS ===== */
+
+img,
+video,
+canvas,
+svg {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+/* Gallery specific fixes */
+.gallery-grid,
+.project-grid,
+[class*="gallery"],
+[class*="project"] {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.gallery-grid img,
+.project-grid img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ===== CARD & CONTAINER FIXES ===== */
+
+.enhanced-card,
+.modern-card,
+.nes-card,
+[class*="card"] {
+  max-width: 100%;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+/* ===== TEXT OVERFLOW PREVENTION ===== */
+
+h1, h2, h3, h4, h5, h6,
+p, span, div, a {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Prevent long URLs or text from breaking layout */
+a {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* ===== BUTTON RESPONSIVE FIXES ===== */
+
+.modern-btn,
+.enhanced-btn,
+button,
+[class*="btn"] {
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .modern-btn,
+  .enhanced-btn {
+    width: 100%;
+    display: block;
+    margin: 0.5rem 0;
+  }
+  
+  .flex .modern-btn,
+  .flex .enhanced-btn {
+    width: auto;
+    min-width: 120px;
+  }
+}
+
+/* ===== FORM ELEMENTS ===== */
+
+form {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* ===== SPACING FIXES ===== */
+
+/* Reduce excessive spacing on mobile */
+@media (max-width: 767px) {
+  .space-x-8 > * + * {
+    margin-left: 0 !important;
+    margin-top: 0.5rem;
+  }
+  
+  .space-x-4 > * + * {
+    margin-left: 0 !important;
+    margin-top: 0.25rem;
+  }
+  
+  .gap-8 {
+    gap: 1rem !important;
+  }
+  
+  .gap-12 {
+    gap: 1.5rem !important;
+  }
+  
+  .gap-16 {
+    gap: 2rem !important;
+  }
+}
+
+/* ===== NAVBAR HAMBURGER MENU FIXES ===== */
+
+#mobile-menu {
+  width: 100%;
+  max-width: 100vw;
+  left: 0;
+  right: 0;
+}
+
+#mobile-menu .nav-link {
+  width: 100%;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+/* ===== HERO SECTION FIXES ===== */
+
+.hero-section {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.hero-section > * {
+  max-width: 100%;
+}
+
+/* ===== FOOTER FIXES ===== */
+
+footer {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+footer .grid {
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  footer .grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ===== TERMINAL EFFECT FIXES ===== */
+
+.terminal-effect {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.terminal-effect::-webkit-scrollbar {
+  height: 4px;
+}
+
+/* ===== SPECIFIC SECTION FIXES ===== */
+
+/* Contact form section */
+.contact-form,
+#formulario {
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  .contact-form .grid,
+  #formulario .grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Gallery section */
+.gallery-section {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Blog section */
+.blog-section {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Cotiza section */
+.cotiza-section {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ===== FINAL SAFETY NET ===== */
+
+/* Absolutely prevent any horizontal scroll */
+* {
+  max-width: 100%;
+}
+
+/* Allow specific elements to be full width */
+html,
+body,
+.navbar,
+section,
+footer,
+.hero-section,
+.max-w-7xl {
+  max-width: 100vw !important;
+}
+
+/* ===== NAVBAR FINAL ADJUSTMENTS ===== */
+
+/* More aggressive navbar spacing reduction */
+@media (max-width: 1200px) and (min-width: 768px) {
+  .nav-link {
+    font-size: 0.5rem !important;
+    padding: 0.35rem 0.4rem !important;
+    letter-spacing: 0.5px !important;
+  }
+  
+  .navbar .hidden.md\:flex {
+    gap: 0.25rem !important;
+  }
+  
+  .navbar .text-2xl {
+    font-size: 1rem !important;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
+  .navbar .text-2xl {
+    font-size: 0.75rem !important;
+  }
+  
+  #mobile-menu .nav-link {
+    font-size: 0.55rem !important;
+    padding: 0.5rem 0.6rem !important;
+  }
+  
+  h1 {
+    font-size: 0.9rem !important;
+  }
+  
+  h2 {
+    font-size: 0.8rem !important;
+  }
+  
+  p {
+    font-size: 0.6rem !important;
+  }
+}
+
+/* ===== TAILWIND UTILITY OVERRIDES ===== */
+
+/* Ensure padding classes don't cause overflow */
+.px-4,
+.px-6,
+.px-8 {
+  padding-left: clamp(0.5rem, 2vw, 2rem) !important;
+  padding-right: clamp(0.5rem, 2vw, 2rem) !important;
+}
+
+.py-20 {
+  padding-top: clamp(2rem, 5vw, 5rem) !important;
+  padding-bottom: clamp(2rem, 5vw, 5rem) !important;
+}
+
+.py-16 {
+  padding-top: clamp(2rem, 4vw, 4rem) !important;
+  padding-bottom: clamp(2rem, 4vw, 4rem) !important;
+}
+
+/* Text size overrides for mobile */
+@media (max-width: 767px) {
+  .text-4xl {
+    font-size: clamp(1.5rem, 5vw, 2.25rem) !important;
+  }
+  
+  .text-3xl {
+    font-size: clamp(1.25rem, 4vw, 1.875rem) !important;
+  }
+  
+  .text-2xl {
+    font-size: clamp(1rem, 3.5vw, 1.5rem) !important;
+  }
+  
+  .text-xl {
+    font-size: clamp(0.875rem, 3vw, 1.25rem) !important;
+  }
+  
+  .text-lg {
+    font-size: clamp(0.8rem, 2.5vw, 1.125rem) !important;
+  }
+}
+
+/* ===== LG GRID COLUMNS RESPONSIVE ===== */
+
+@media (max-width: 1023px) {
+  .lg\:grid-cols-2 {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .lg\:grid-cols-2,
+  .lg\:grid-cols-3,
+  .lg\:grid-cols-4,
+  .md\:grid-cols-2,
+  .md\:grid-cols-3 {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ===== WIDTH UTILITIES ===== */
+
+.w-16,
+.w-20,
+.w-24,
+.w-32 {
+  max-width: 100%;
+}
+
+/* ===== MARGIN UTILITIES MOBILE ===== */
+
+@media (max-width: 767px) {
+  .mx-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  .-mx-4 {
+    margin-left: -0.5rem !important;
+    margin-right: -0.5rem !important;
+  }
+}
+
+/* ===== SPECIFIC COMPONENT FIXES ===== */
+
+/* Modern button with icon */
+.modern-btn .btn-icon,
+.enhanced-btn .btn-icon {
+  flex-shrink: 0;
+}
+
+.modern-btn .btn-text,
+.enhanced-btn .btn-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Social media links */
+.social-links {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .social-links {
+    gap: 1rem !important;
+  }
+}
+
+/* Stats or counter sections */
+.stats-grid,
+.counter-grid {
+  width: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .stats-grid,
+  .counter-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ===== RETRO CALENDAR RESPONSIVE IMPROVEMENTS ===== */
+
+.retro-calendar-container {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .retro-calendar-container {
+    padding: 0.5rem;
+  }
+  
+  .retro-screen {
+    padding: 0.5rem;
+  }
+  
+  .calendar-grid {
+    gap: 0.25rem;
+  }
+  
+  .calendar-day {
+    font-size: 0.5rem;
+    padding: 0.25rem;
+  }
+}
+
+/* ===== ANIMATION PERFORMANCE ===== */
+
+/* Disable animations on mobile for better performance */
+@media (max-width: 767px) and (prefers-reduced-motion: no-preference) {
+  .animate-slide-in-left,
+  .animate-slide-in-right,
+  .animate-fade-in {
+    animation: none !important;
+  }
+}
+
+/* ===== ASPECT RATIO FIXES ===== */
+
+/* Ensure embedded content maintains aspect ratio */
+.aspect-video,
+[style*="padding-bottom: 56.25%"] {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* ===== PRINT STYLES ===== */
+
+@media print {
+  .navbar,
+  #mobile-menu,
+  footer {
+    display: none;
+  }
+  
+  body {
+    overflow: visible;
+    max-width: 100%;
+  }
+  
+  section {
+    page-break-inside: avoid;
+  }
+}
+
+/* ===== ACCESSIBILITY IMPROVEMENTS ===== */
+
+/* Focus visible for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+.nav-link:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+/* Skip to content link */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--accent-primary);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 10000;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* ===== FINAL CRITICAL FIXES ===== */
+
+/* Prevent any element from being wider than viewport */
+* {
+  min-width: 0;
+}
+
+/* Ensure flex items can shrink */
+.flex > * {
+  min-width: 0;
+  flex-shrink: 1;
+}
+
+/* Grid items should not overflow */
+.grid > * {
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* Prevent text from causing overflow */
+pre,
+code {
+  max-width: 100%;
+  overflow-x: auto;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+/* Tables responsive */
+@media (max-width: 767px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  thead {
+    display: none;
+  }
+  
+  tr {
+    display: block;
+    margin-bottom: 1rem;
+  }
+  
+  td {
+    display: block;
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+  
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 45%;
+    padding-left: 1rem;
+    font-weight: bold;
+    text-align: left;
+  }
 }
