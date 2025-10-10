@@ -612,7 +612,6 @@ class ProjectCalendar {
         // Store selected date
         if (monthType === 'current-month') {
             this.selectedDate = new Date(this.currentYear, this.currentMonth, day);
-            console.log('Selected date:', this.selectedDate.toLocaleDateString('es-ES'));
         }
     }
     

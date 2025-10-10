@@ -15,7 +15,7 @@
 <!-- Navigation -->
 <nav class="navbar">
 <div class="navbar-container">
-<a href="index.html" class="navbar-logo">Escuadrón 404</a>
+<a href="index.html" class="navbar-logo">404</a>
 <div class="navbar-menu">
 <a href="index.html" class="nav-link">Inicio</a>
 <a href="comunidad.html" class="nav-link">Comunidad</a>
@@ -24,7 +24,6 @@
 <a href="eventos.html" class="nav-link">Eventos</a>
 <a href="proyectos.html" class="nav-link">Proyectos</a>
 <a href="contacto.html" class="nav-link active">Contacto</a>
-<a href="https://discord.gg/QQZmhGQncf" target="_blank" class="nav-link"><i class="fab fa-discord"></i> Discord</a>
 </div>
 <button class="navbar-toggle">
 <span></span>
@@ -41,7 +40,6 @@
 <a href="eventos.html" class="nav-link">Eventos</a>
 <a href="proyectos.html" class="nav-link">Proyectos</a>
 <a href="contacto.html" class="nav-link active">Contacto</a>
-<a href="https://discord.gg/QQZmhGQncf" target="_blank" class="nav-link"><i class="fab fa-discord"></i> Discord</a>
 </div>
 <!-- Hero Section -->
 <section class="hero-section min-h-screen flex items-center pt-16">
@@ -120,18 +118,6 @@
 <a class="text-purple-400 hover:text-purple-300" href="https://www.google.com/maps/place/C%C3%BAcuta,+Norte+de+Santander" target="_blank">Ver Mapa</a>
 </div>
 </div>
-<!-- Google Maps Section -->
-<div class="mt-16">
-<div class="text-center mb-8">
-<h3 class="text-2xl font-bold text-gradient mb-2">Encuéntranos</h3>
-<p class="text-gray-300">Cúcuta, Norte de Santander, Colombia</p>
-</div>
-<div class="enhanced-card p-2">
-<div class="relative w-full" style="padding-bottom: 56.25%; height: 0; overflow: hidden;">
-<iframe class="absolute top-0 left-0 w-full h-full rounded-lg" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126846.27891827267!2d-72.57080445!3d7.8939647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6645f2f5a7d4d1%3A0x3c8c5c5e5e5e5e5e!2sC%C3%BAcuta%2C%20Norte%20de%20Santander%2C%20Colombia!5e0!3m2!1ses!2sco!4v1234567890123!5m2!1ses!2sco" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
-</div>
-</div>
 </div>
 </section>
 <!-- Contact Form Section -->
@@ -185,7 +171,8 @@
 </div>
 <div class="enhanced-card p-8">
 <h3 class="text-2xl font-bold mb-6">Formulario de Contacto</h3>
-<form class="space-y-6" id="contact-form">
+<form class="space-y-6" id="contact-form" method="POST" data-netlify="true">
+<input type="hidden" name="form-name" value="contacto" />
 <div>
 <label class="block text-sm font-medium text-gray-300 mb-2" for="empresa">Empresa *</label>
 <input class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:outline-none" id="empresa" name="empresa" required="" type="text"/>
@@ -327,16 +314,16 @@
 <a class="text-gray-400 hover:text-purple-400 transition-colors" href="https://wa.me/573165102584">
 <i class="fab fa-whatsapp text-xl"></i>
 </a>
-<a class="text-gray-400 hover:text-purple-400 transition-colors" href="javascript:void(0)">
+                <a class="text-gray-400 hover:text-purple-400 transition-colors" href="https://github.com/escuadron404" aria-label="Social Media">
 <i class="fab fa-github text-xl"></i>
 </a>
-<a class="text-gray-400 hover:text-purple-400 transition-colors" href="javascript:void(0)">
+                <a class="text-gray-400 hover:text-purple-400 transition-colors" href="https://www.linkedin.com/company/escuadron404/" aria-label="Social Media">
 <i class="fab fa-linkedin text-xl"></i>
 </a>
 </div>
 </div>
 <div>
-<h4 class="text-lg font-semibold mb-4">Servicios</h4>
+{{ ... }}
 <ul class="space-y-2 text-gray-300">
 <li><a class="hover:text-purple-400 transition-colors" href="agencia.html">Desarrollo Web</a></li>
 <li><a class="hover:text-purple-400 transition-colors" href="agencia.html">Apps Móviles</a></li>

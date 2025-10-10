@@ -2625,6 +2625,12 @@ button:focus-visible,
 /* Prevent any element from being wider than viewport */
 * {
   min-width: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw !important;
 }
 
 /* Ensure flex items can shrink */
