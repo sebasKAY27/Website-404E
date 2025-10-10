@@ -4,7 +4,7 @@
 const CONFIG = {
     FORM_ENDPOINT: 'FORM_ENDPOINT_PLACEHOLDER', // Reemplazar con URL real
     DISCORD_INVITE: 'https://discord.gg/QQZmhGQncf', // Link real de Discord
-    WHATSAPP_NUMBER: '573001234567' // Número de WhatsApp (formato internacional)
+    WHATSAPP_NUMBER: '573165102584' // Número de WhatsApp (formato internacional)
 };
 
 // DOM Elements
