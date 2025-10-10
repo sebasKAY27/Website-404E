@@ -8,7 +8,7 @@ const CONFIG = {
 };
 
 // DOM Elements
-let mobileMenuBtn, mobileMenu, bootcampForm, contactForm, proyectoFilters, proyectoCards;
+let navbarToggle, navbarMobile, bootcampForm, contactForm, proyectoFilters, proyectoCards;
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
@@ -16,40 +16,48 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeNavigation();
     initializeForms();
     initializeProjectFilters();
-    // initializeDiscordLinks();
     initializeSmoothScrolling();
     initializeScrollReveal();
 });
 
 // Initialize DOM elements
 function initializeElements() {
-    mobileMenuBtn = document.getElementById('mobile-menu-button');
-    mobileMenu = document.getElementById('mobile-menu');
+    navbarToggle = document.querySelector('.navbar-toggle');
+    navbarMobile = document.querySelector('.navbar-mobile');
     bootcampForm = document.getElementById('bootcamp-form');
     contactForm = document.getElementById('contact-form');
     proyectoFilters = document.querySelectorAll('.proyecto-filter');
     proyectoCards = document.querySelectorAll('.proyecto-card');
 }
 
-// Navigation functionality
+// Navigation functionality - Clean and simple
 function initializeNavigation() {
-    // Mobile menu toggle
-    if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener('click', function() {
-            mobileMenu.classList.toggle('hidden');
-        });
-    }
-
+    if (!navbarToggle || !navbarMobile) return;
+    
+    // Toggle mobile menu
+    navbarToggle.addEventListener('click', function() {
+        navbarToggle.classList.toggle('active');
+        navbarMobile.classList.toggle('active');
+    });
+    
     // Close mobile menu when clicking on links
-    if (mobileMenu) {
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                mobileMenu.classList.add('hidden');
-            });
+    const mobileLinks = navbarMobile.querySelectorAll('.nav-link');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navbarToggle.classList.remove('active');
+            navbarMobile.classList.remove('active');
         });
-    }
-
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+        const isClickInside = navbarToggle.contains(event.target) || navbarMobile.contains(event.target);
+        if (!isClickInside && navbarMobile.classList.contains('active')) {
+            navbarToggle.classList.remove('active');
+            navbarMobile.classList.remove('active');
+        }
+    });
+    
     // Update active navigation on scroll
     window.addEventListener('scroll', updateActiveNavigation);
 }

@@ -13,47 +13,36 @@
 </head>
 <body class="bg-black text-white font-mono scanlines" data-theme="dark">
 <!-- Navigation -->
-<nav class="navbar fixed w-full top-0 z-50">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex justify-between h-16">
-<div class="flex items-center">
-<a class="text-2xl font-bold text-gradient" href="index.html">Escuadrón 404</a>
+<nav class="navbar">
+<div class="navbar-container">
+<a href="index.html" class="navbar-logo">404</a>
+<div class="navbar-menu">
+<a href="index.html" class="nav-link active">Inicio</a>
+<a href="comunidad.html" class="nav-link">Comunidad</a>
+<a href="agencia.html" class="nav-link">Agencia</a>
+<a href="bootcamp.html" class="nav-link">Bootcamp</a>
+<a href="eventos.html" class="nav-link">Eventos</a>
+<a href="proyectos.html" class="nav-link">Proyectos</a>
+<a href="contacto.html" class="nav-link">Contacto</a>
+
 </div>
-<div class="hidden md:flex items-center space-x-8">
-<a class="nav-link active" href="index.html">Inicio</a>
-<a class="nav-link" href="comunidad.html">Comunidad</a>
-<a class="nav-link" href="agencia.html">Agencia</a>
-<a class="nav-link" href="bootcamp.html">Bootcamp</a>
-<a class="nav-link" href="eventos.html">Eventos</a>
-<a class="nav-link" href="proyectos.html">Proyectos</a>
-<a class="nav-link" href="contacto.html">Contacto</a>
-<a class="nav-link flex items-center" href="https://discord.gg/QQZmhGQncf" target="_blank">
-<i class="fab fa-discord mr-2"></i>Discord
-                    </a>
-</div>
-<div class="md:hidden flex items-center">
-<button class="text-white hover:text-purple-400" id="mobile-menu-button">
-<i class="fas fa-bars text-xl"></i>
+<button class="navbar-toggle">
+<span></span>
+<span></span>
+<span></span>
 </button>
 </div>
-</div>
-</div>
-<!-- Mobile menu -->
-<div class="hidden md:hidden bg-black border-t border-purple-500" id="mobile-menu">
-<div class="px-2 pt-2 pb-3 space-y-1">
-<a class="nav-link block px-3 py-2" href="index.html">Inicio</a>
-<a class="nav-link block px-3 py-2" href="comunidad.html">Comunidad</a>
-<a class="nav-link block px-3 py-2" href="agencia.html">Agencia</a>
-<a class="nav-link block px-3 py-2" href="bootcamp.html">Bootcamp</a>
-<a class="nav-link block px-3 py-2" href="eventos.html">Eventos</a>
-<a class="nav-link block px-3 py-2" href="proyectos.html">Proyectos</a>
-<a class="nav-link block px-3 py-2" href="contacto.html">Contacto</a>
-<a class="nav-link block px-3 py-2" href="https://discord.gg/QQZmhGQncf" target="_blank">
-<i class="fab fa-discord mr-2"></i>Discord
-                </a>
-</div>
-</div>
 </nav>
+<div class="navbar-mobile">
+<a href="index.html" class="nav-link active">Inicio</a>
+<a href="comunidad.html" class="nav-link">Comunidad</a>
+<a href="agencia.html" class="nav-link">Agencia</a>
+<a href="bootcamp.html" class="nav-link">Bootcamp</a>
+<a href="eventos.html" class="nav-link">Eventos</a>
+<a href="proyectos.html" class="nav-link">Proyectos</a>
+<a href="contacto.html" class="nav-link">Contacto</a>
+
+</div>
 <!-- Hero Section -->
 <section class="hero-section min-h-screen flex items-center pt-16" id="hero">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
