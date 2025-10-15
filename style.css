@@ -96,7 +96,6 @@ body {
   background-attachment: fixed;
   animation: subtle-scanlines 0.1s linear infinite;
   overflow-x: hidden;
-  max-width: 100vw;
   width: 100%;
 }
 
@@ -2046,7 +2045,7 @@ table {
 
 /* Force all direct children to respect container width */
 body > * {
-  max-width: 100vw;
+  max-width: 100%;
   overflow-x: hidden;
 }
 
@@ -2269,7 +2268,7 @@ select {
 
 .hero-section {
   width: 100%;
-  max-width: 100vw;
+  max-width: 100%;
   overflow-x: hidden;
 }
 
@@ -2281,7 +2280,7 @@ select {
 
 footer {
   width: 100%;
-  max-width: 100vw;
+  max-width: 100%;
   overflow-x: hidden;
 }
 
@@ -2356,7 +2355,7 @@ section,
 footer,
 .hero-section,
 .max-w-7xl {
-  max-width: 100vw !important;
+  max-width: 100% !important;
 }
 
 /* ===== NAVBAR FINAL ADJUSTMENTS ===== */
@@ -2630,7 +2629,7 @@ button:focus-visible,
 
 html, body {
   overflow-x: hidden;
-  max-width: 100vw !important;
+  max-width: 100% !important;
 }
 
 /* Ensure flex items can shrink */
