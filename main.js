@@ -152,7 +152,6 @@ function initializeForms() {
         console.log('Contact form handler initialized');
     }
 }
-
 // Project filter functionality
 function initializeProjectFilters() {
     if (proyectoFilters.length === 0) return;
