@@ -2,7 +2,96 @@
 
 /* Import retro 8-bit font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700;900&display=swap');
+html {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+  width: 100% !important;
+  position: relative;
+  scroll-behavior: smooth;
+}
 
+body {
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  max-width: 100vw !important;
+  width: 100% !important;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+/* Forzar que TODOS los elementos respeten el ancho de la ventana */
+* {
+  box-sizing: border-box !important;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box !important;
+}
+
+/* Prevenir que elementos hijos causen overflow */
+body > * {
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+}
+
+/* Asegurar que secciones no se desborden */
+section {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+/* Contenedores principales */
+.max-w-7xl,
+.container {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+/* Grid y Flex no deben causar overflow */
+.grid,
+.flex {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+/* Elementos específicos que suelen causar problemas */
+img,
+video,
+canvas,
+svg,
+iframe {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Cards y elementos contenedores */
+.enhanced-card,
+.modern-card,
+[class*="card"] {
+  max-width: 100% !important;
+  overflow: hidden !important;
+}
+
+/* Navbar fix específico */
+.navbar,
+.navbar-container {
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+}
+
+/* Hero section fix */
+.hero-section {
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+}
+
+/* Footer fix */
+footer {
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+}
 /* CSS Variables for Retro 90s/NES Theme */
 :root {
   /* Purple/Black Color Palette */
