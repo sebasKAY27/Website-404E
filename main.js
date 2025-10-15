@@ -86,16 +86,70 @@ function updateActiveNavigation() {
 
 // Form handling
 function initializeForms() {
-    // Bootcamp form - removed JavaScript handler to use Netlify Forms
+    // Bootcamp form handler
     if (bootcampForm) {
-        // Event listener removed to allow Netlify Forms handling
-        console.log('Bootcamp form initialized for Netlify Forms');
+        bootcampForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Recopilar datos del formulario
+            const formData = new FormData(bootcampForm);
+            
+            try {
+                // Enviar con fetch a Netlify
+                const response = await fetch('/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: new URLSearchParams(formData).toString()
+                });
+                
+                if (response.ok) {
+                    showMessage('¡Pre-registro enviado exitosamente! Te contactaremos pronto.', 'success');
+                    bootcampForm.reset();
+                } else {
+                    showMessage('Error al enviar el formulario. Intenta de nuevo.', 'error');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                showMessage('Error de conexión. Por favor intenta de nuevo.', 'error');
+            }
+        });
+        
+        console.log('Bootcamp form handler initialized');
     }
     
-    // Contact form - removed JavaScript handler to use Netlify Forms
+    // Contact form handler
     if (contactForm) {
-        // Event listener removed to allow Netlify Forms handling
-        console.log('Contact form initialized for Netlify Forms');
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Recopilar datos del formulario
+            const formData = new FormData(contactForm);
+            
+            try {
+                // Enviar con fetch a Netlify
+                const response = await fetch('/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: new URLSearchParams(formData).toString()
+                });
+                
+                if (response.ok) {
+                    showMessage('¡Solicitud enviada! Nos pondremos en contacto pronto.', 'success');
+                    contactForm.reset();
+                } else {
+                    showMessage('Error al enviar el formulario. Intenta de nuevo.', 'error');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                showMessage('Error de conexión. Por favor intenta de nuevo.', 'error');
+            }
+        });
+        
+        console.log('Contact form handler initialized');
     }
 }
 
