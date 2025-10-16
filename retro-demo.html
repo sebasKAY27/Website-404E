@@ -100,20 +100,15 @@
                         <div class="nes-progress-bar" style="width: 85%; background: var(--nes-yellow);"></div>
                     </div>
                 </div>
-            </div>
-        </section>
-
         <!-- Input Demo -->
         <section class="nes-container dark">
             <h2 class="nes-title text-2xl mb-6">Formularios Retro</h2>
-            <form class="space-y-4" method="POST" data-netlify="true">
-                <input type="hidden" name="form-name" value="retro-demo" />
+            <form class="space-y-4" action="https://formspree.io/f/myznlbwj" method="POST">
                 <div>
                     <label class="nes-text block mb-2">Player Name:</label>
                     <input type="text" class="nes-input dark w-full" placeholder="Enter your name" name="player-name">
                 </div>
                 <div>
-                    <label class="nes-text block mb-2">High Score:</label>
                     <input type="number" class="nes-input dark w-full" value="999999" readonly name="high-score">
                 </div>
                 <button type="submit" class="btn-primary">
