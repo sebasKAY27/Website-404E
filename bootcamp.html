@@ -147,7 +147,7 @@
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
 <div class="text-center mb-16">
 <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">Objetivos del Programa</h2>
-<p class="text-xl text-gray-300">Lo que esperamos lograr con nuestros estudiantes</p>
+<p class="text-xl text-gray-3300">Lo que esperamos lograr con nuestros estudiantes</p>
 </div>
 <div class="grid md:grid-cols-4 gap-8">
 <div class="enhanced-card text-center p-6 opacity-75">
@@ -439,6 +439,18 @@
 </select>
 </div>
 </div>
+<!-- Player Name and High Score from retro-demo.html -->
+<div class="grid md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-medium text-gray-300 mb-2" for="player-name">Player Name (Opcional)</label>
+<input type="text" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:outline-none" placeholder="Enter your name" name="player-name">
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-300 mb-2" for="high-score">High Score (Opcional)</label>
+<input type="number" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:outline-none" value="999999" readonly name="high-score">
+</div>
+</div>
+<!-- End of added elements -->
 <div>
 <label class="block text-sm font-medium text-gray-300 mb-2" for="motivation">¿Por qué quieres unirte al bootcamp?</label>
 <textarea class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:outline-none" id="motivation" name="motivation" rows="4"></textarea>
