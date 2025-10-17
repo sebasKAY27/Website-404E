@@ -95,9 +95,25 @@ function initializeForms() {
     
     // Contact form handler
     if (contactForm) {
-        // Remove the event listener that was preventing default form submission
-        // The form will now submit directly to Formspree
-        console.log('Contact form will submit directly to Formspree');
+        // Antes de enviar, mapeamos los campos visibles a los ocultos solicitados por el backend
+        contactForm.addEventListener('submit', function() {
+            try {
+                const nombre = document.getElementById('nombreContacto')?.value?.trim() || '';
+                const email = document.getElementById('emailCorporativo')?.value?.trim() || '';
+                const mensaje = document.getElementById('descripcionProyecto')?.value?.trim() || '';
+
+                const hiddenNombre = document.getElementById('hidden-Nombre');
+                const hiddenEmail = document.getElementById('hidden-Email');
+                const hiddenMensaje = document.getElementById('hidden-Mensaje');
+
+                if (hiddenNombre) hiddenNombre.value = nombre;
+                if (hiddenEmail) hiddenEmail.value = email;
+                if (hiddenMensaje) hiddenMensaje.value = mensaje;
+            } catch (e) {
+                console.warn('No se pudieron mapear los campos ocultos del formulario de contacto:', e);
+            }
+        });
+        console.log('Contact form will submit mapped fields to backend');
     }
 }
 // Project filter functionality
