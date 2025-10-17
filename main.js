@@ -88,68 +88,16 @@ function updateActiveNavigation() {
 function initializeForms() {
     // Bootcamp form handler
     if (bootcampForm) {
-        bootcampForm.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            // Recopilar datos del formulario
-            const formData = new FormData(bootcampForm);
-            
-            try {
-                // Enviar con fetch a Netlify
-                const response = await fetch('/', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded'
-                    },
-                    body: new URLSearchParams(formData).toString()
-                });
-                
-                if (response.ok) {
-                    showMessage('¡Pre-registro enviado exitosamente! Te contactaremos pronto.', 'success');
-                    bootcampForm.reset();
-                } else {
-                    showMessage('Error al enviar el formulario. Intenta de nuevo.', 'error');
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                showMessage('Error de conexión. Por favor intenta de nuevo.', 'error');
-            }
-        });
-        
-        console.log('Bootcamp form handler initialized');
+        // Remove the event listener that was preventing default form submission
+        // The form will now submit directly to Formspree
+        console.log('Bootcamp form will submit directly to Formspree');
     }
     
     // Contact form handler
     if (contactForm) {
-        contactForm.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            // Recopilar datos del formulario
-            const formData = new FormData(contactForm);
-            
-            try {
-                // Enviar con fetch a Netlify
-                const response = await fetch('/', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded'
-                    },
-                    body: new URLSearchParams(formData).toString()
-                });
-                
-                if (response.ok) {
-                    showMessage('¡Solicitud enviada! Nos pondremos en contacto pronto.', 'success');
-                    contactForm.reset();
-                } else {
-                    showMessage('Error al enviar el formulario. Intenta de nuevo.', 'error');
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                showMessage('Error de conexión. Por favor intenta de nuevo.', 'error');
-            }
-        });
-        
-        console.log('Contact form handler initialized');
+        // Remove the event listener that was preventing default form submission
+        // The form will now submit directly to Formspree
+        console.log('Contact form will submit directly to Formspree');
     }
 }
 // Project filter functionality
