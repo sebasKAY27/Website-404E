@@ -2,7 +2,7 @@
 
 // Configuración de endpoints (PLACEHOLDERS)
 const CONFIG = {
-    FORM_ENDPOINT: 'FORM_ENDPOINT_PLACEHOLDER', // Reemplazar con URL real
+    FORM_ENDPOINT: 'URL_GOOGLE_SCRIPT', // Reemplazar con URL real
     DISCORD_INVITE: 'https://discord.gg/QQZmhGQncf', // Link real de Discord
     WHATSAPP_NUMBER: '573165102584' // Número de WhatsApp (formato internacional)
 };
@@ -88,33 +88,126 @@ function updateActiveNavigation() {
 function initializeForms() {
     // Bootcamp form handler
     if (bootcampForm) {
-        // Remove the event listener that was preventing default form submission
-        // The form will now submit directly to Formspree
-        console.log('Bootcamp form will submit directly to Formspree');
+        console.log('Bootcamp form: listo para enviar a Sheets');
+
+        const msgB = bootcampForm.querySelector('.form-msg') || (() => {
+        const p = document.createElement('p');
+        p.className = 'form-msg text-sm mt-3 text-gray-300';
+        bootcampForm.appendChild(p);
+        return p;
+        })();
+        const btnB = bootcampForm.querySelector('button[type="submit"]');
+
+        bootcampForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        if (!CONFIG.FORM_ENDPOINT || CONFIG.FORM_ENDPOINT.includes('PLACEHOLDER')) {
+            showMessage('Configura CONFIG.FORM_ENDPOINT con tu URL /exec', 'warning');
+            msgB.textContent = 'Falta configurar el endpoint.';
+            return;
+        }
+
+        // Validación mínima por required
+        const raw = Object.fromEntries(new FormData(bootcampForm).entries());
+        const required = Array.from(bootcampForm.querySelectorAll('[name][required]')).map(el => el.name);
+        const missing = required.filter(n => !raw[n] || String(raw[n]).trim() === '');
+        if (missing.length) {
+            msgB.textContent = 'Por favor completa los campos obligatorios.';
+            return;
+        }
+
+        try {
+            if (btnB) { btnB.disabled = true; btnB.dataset._text = btnB.textContent; btnB.textContent = 'Enviando...'; }
+            msgB.textContent = '';
+
+            // FormData -> evita preflight CORS
+            const fd = new FormData(bootcampForm);
+            // Garantiza tipo=bootcamp (por si faltó en el HTML)
+            if (!fd.get('tipo')) fd.append('tipo', 'bootcamp');
+
+            const res = await fetch(CONFIG.FORM_ENDPOINT, { method: 'POST', body: fd });
+            const text = await res.text();
+            let json = {}; try { json = JSON.parse(text); } catch(_) {}
+
+            if (res.ok && json.ok !== false) {
+            msgB.textContent = '¡Pre-registro recibido! Te escribiremos pronto.';
+            bootcampForm.reset();
+            showMessage('Pre-registro enviado ✅', 'success');
+            } else {
+            msgB.textContent = 'No se pudo enviar. Intenta de nuevo.';
+            showMessage('Error al enviar el pre-registro', 'error');
+            console.error('Sheets response:', text);
+            }
+        } catch (err) {
+            msgB.textContent = 'Error de red. Revisa tu conexión.';
+            showMessage('Error de red al enviar', 'error');
+            console.error(err);
+        } finally {
+            if (btnB) { btnB.disabled = false; btnB.textContent = btnB.dataset._text || 'Enviar'; }
+        }
+        });
     }
     
     // Contact form handler
     if (contactForm) {
-        // Antes de enviar, mapeamos los campos visibles a los ocultos solicitados por el backend
-        contactForm.addEventListener('submit', function() {
+        console.log('Contact form: listo para enviar a Sheets');
+        const msg = contactForm.querySelector('.form-msg') || (function(){
+            const p = document.createElement('p');
+            p.className = 'form-msg text-sm mt-3 text-gray-300';
+            contactForm.appendChild(p);
+            return p;
+        })();
+        const btn = contactForm.querySelector('button[type="submit"]');
+
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            if (!CONFIG.FORM_ENDPOINT || CONFIG.FORM_ENDPOINT.includes('PLACEHOLDER')) {
+                showMessage('Configura CONFIG.FORM_ENDPOINT con tu URL /exec', 'warning');
+                msg.textContent = 'Falta configurar el endpoint.';
+                return;
+            }
+
+            // Validación mínima por atributos required
+            const raw = Object.fromEntries(new FormData(contactForm).entries());
+            const required = Array.from(contactForm.querySelectorAll('[name][required]')).map(el => el.name);
+            const missing = required.filter(n => !raw[n] || String(raw[n]).trim() === '');
+            if (missing.length) {
+                msg.textContent = 'Por favor completa los campos obligatorios.';
+                return;
+            }
+
             try {
-                const nombre = document.getElementById('nombreContacto')?.value?.trim() || '';
-                const email = document.getElementById('emailCorporativo')?.value?.trim() || '';
-                const mensaje = document.getElementById('descripcionProyecto')?.value?.trim() || '';
+                if (btn) { btn.disabled = true; btn.dataset._text = btn.textContent; btn.textContent = 'Enviando...'; }
+                msg.textContent = '';
 
-                const hiddenNombre = document.getElementById('hidden-Nombre');
-                const hiddenEmail = document.getElementById('hidden-Email');
-                const hiddenMensaje = document.getElementById('hidden-Mensaje');
+                // Enviar como FormData para evitar preflight CORS
+                const fd = new FormData(contactForm);
+                const res = await fetch(CONFIG.FORM_ENDPOINT, { method: 'POST', body: fd });
 
-                if (hiddenNombre) hiddenNombre.value = nombre;
-                if (hiddenEmail) hiddenEmail.value = email;
-                if (hiddenMensaje) hiddenMensaje.value = mensaje;
-            } catch (e) {
-                console.warn('No se pudieron mapear los campos ocultos del formulario de contacto:', e);
+                const text = await res.text();
+                let json = {};
+                try { json = JSON.parse(text); } catch (_) {}
+
+                if (res.ok && json.ok !== false) {
+                    msg.textContent = '¡Recibido! Te contactaremos pronto.';
+                    contactForm.reset();
+                    showMessage('Formulario enviado correctamente ✅', 'success');
+                } else {
+                    msg.textContent = 'No se pudo enviar. Intenta de nuevo.';
+                    showMessage('Error al enviar el formulario', 'error');
+                    console.error('Sheets response:', text);
+                }
+            } catch (err) {
+                msg.textContent = 'Error de red. Revisa tu conexión.';
+                showMessage('Error de red al enviar', 'error');
+                console.error(err);
+            } finally {
+                if (btn) { btn.disabled = false; btn.textContent = btn.dataset._text || 'Enviar'; }
             }
         });
-        console.log('Contact form will submit mapped fields to backend');
     }
+
 }
 // Project filter functionality
 function initializeProjectFilters() {

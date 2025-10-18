@@ -1,559 +1,508 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Bootcamp de Programación - Escuadrón 404</title>
-<meta content="Transforma tu carrera con nuestro bootcamp intensivo de desarrollo full-stack. 12 semanas de formación con mentoría personalizada." name="description"/>
-<link href="tailwind.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-<link rel="icon" href="./IMAGENES/logo-retro-e04.png" type="image/png" />
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Bootcamp de Programación - Escuadrón 404</title>
+  <meta content="Transforma tu carrera con nuestro bootcamp intensivo de desarrollo full-stack. 12 semanas de formación con mentoría personalizada." name="description"/>
+  <link href="tailwind.css" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link rel="icon" href="./IMAGENES/logo-retro-e04.png" type="image/png" />
 </head>
 <body class="bg-black text-white font-mono" data-theme="dark">
-<!-- Navigation -->
-<nav class="navbar">
-<div class="navbar-container">
-<a href="index.html" class="navbar-logo">404</a>
-<div class="navbar-menu">
-<a href="index.html" class="nav-link">Inicio</a>
-<a href="comunidad.html" class="nav-link">Comunidad</a>
-<a href="agencia.html" class="nav-link">Agencia</a>
-<a href="bootcamp.html" class="nav-link active">Bootcamp</a>
-<a href="eventos.html" class="nav-link">Eventos</a>
-<a href="proyectos.html" class="nav-link">Proyectos</a>
-<a href="contacto.html" class="nav-link">Contacto</a>
-</div>
-<button class="navbar-toggle">
-<span></span>
-<span></span>
-<span></span>
-</button>
-</div>
-</nav>
-<div class="navbar-mobile">
-<a href="index.html" class="nav-link">Inicio</a>
-<a href="comunidad.html" class="nav-link">Comunidad</a>
-<a href="agencia.html" class="nav-link">Agencia</a>
-<a href="bootcamp.html" class="nav-link active">Bootcamp</a>
-<a href="eventos.html" class="nav-link">Eventos</a>
-<a href="proyectos.html" class="nav-link">Proyectos</a>
-<a href="contacto.html" class="nav-link">Contacto</a>
-</div>
-<!-- Hero Section -->
-<section class="hero-section min-h-screen flex items-center pt-16 relative">
-<!-- Overlay de desenfoque -->
-<div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-10"></div>
-<!-- Badge "Próximamente" -->
-<div class="absolute top-20 left-1/2 transform -translate-x-1/2 z-20">
-<div class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-full shadow-lg animate-pulse">
-<i class="fas fa-clock mr-2"></i>
-<span class="font-bold">Próximamente</span>
-</div>
-</div>
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-20">
-<div class="text-center">
-<h1 class="text-4xl sm:text-6xl font-bold mb-6 animate-slide-in-left">
-                    Bootcamp de <span class="text-gradient">Programación</span>
-</h1>
-<div class="terminal-effect text-xl sm:text-2xl mb-8 max-w-3xl mx-auto animate-fade-in">
-<div class="flex items-center justify-center mb-2">
-<span class="text-green-400 mr-2">$</span>
-<span class="text-blue-400">echo</span>
-<span class="text-white ml-2">"Próximamente: Transforma tu carrera en 12 semanas"</span>
-</div>
-<div class="text-sm text-gray-400">
-                        Programa intensivo de desarrollo full-stack que estará disponible pronto
-                    </div>
-</div>
-<div class="flex flex-col sm:flex-row gap-6 justify-center mb-12 animate-bounce-in">
-<a class="modern-btn modern-btn-primary opacity-75 cursor-not-allowed" href="#registro">
-<span class="btn-icon">
-<i class="fas fa-user-plus"></i>
-</span>
-<span class="btn-text">Pre-registrarse (Próximamente)</span>
-<span class="btn-shine"></span>
-</a>
-<a class="modern-btn modern-btn-secondary" href="#info">
-<span class="btn-icon">
-<i class="fas fa-info-circle"></i>
-</span>
-<span class="btn-text">Ver Información</span>
-<span class="btn-shine"></span>
-</a>
-</div>
-</div>
-</div>
-</section>
-<!-- Info Section -->
-<section class="py-20 bg-gray-900" id="info">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-16">
-<h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">¿Qué es el Bootcamp?</h2>
-<p class="text-xl text-gray-300">Información sobre nuestro programa intensivo</p>
-</div>
-<div class="grid md:grid-cols-2 gap-12 items-center">
-<div>
-<h3 class="text-2xl font-bold mb-6 text-purple-400">Programa Intensivo de 12 Semanas</h3>
-<div class="space-y-4 text-gray-300">
-<div class="flex items-start">
-<i class="fas fa-check-circle text-green-400 mr-3 mt-1"></i>
-<p><strong>Desarrollo Full-Stack:</strong> Aprende frontend y backend desde cero</p>
-</div>
-<div class="flex items-start">
-<i class="fas fa-check-circle text-green-400 mr-3 mt-1"></i>
-<p><strong>Mentoría Personalizada:</strong> Un mentor experto te guiará durante todo el proceso</p>
-</div>
-<div class="flex items-start">
-<i class="fas fa-check-circle text-green-400 mr-3 mt-1"></i>
-<p><strong>Proyectos Reales:</strong> Trabaja en proyectos de empresas reales</p>
-</div>
-<div class="flex items-start">
-<i class="fas fa-check-circle text-green-400 mr-3 mt-1"></i>
-<p><strong>Garantía de Empleo:</strong> Si no consigues trabajo, te devolvemos tu inversión</p>
-</div>
-<div class="flex items-start">
-<i class="fas fa-check-circle text-green-400 mr-3 mt-1"></i>
-<p><strong>Red de Contactos:</strong> Acceso a nuestra red de empresas partner</p>
-</div>
-</div>
-</div>
-<div class="enhanced-card p-8 text-center">
-<div class="w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-<i class="fas fa-rocket text-white text-3xl"></i>
-</div>
-<h4 class="text-xl font-semibold mb-4">¿Por qué elegir nuestro Bootcamp?</h4>
-<p class="text-gray-300 mb-6">
-                        Nuestro bootcamp está diseñado por desarrolladores para desarrolladores. 
-                        No solo aprenderás a programar, sino que desarrollarás las habilidades 
-                        necesarias para destacar en el mercado laboral.
-                    </p>
-<div class="bg-purple-900 bg-opacity-50 p-4 rounded-lg">
-<p class="text-purple-300 text-sm">
-<i class="fas fa-info-circle mr-2"></i>
-<strong>Próximamente:</strong> El bootcamp estará disponible en los próximos meses. 
-                            Mantente atento a nuestras redes sociales para más información.
-                        </p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Stats Section -->
-<section class="py-20 bg-black relative">
-<!-- Overlay de desenfoque -->
-<div class="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-10"></div>
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-<div class="text-center mb-16">
-<h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">Objetivos del Programa</h2>
-<p class="text-xl text-gray-3300">Lo que esperamos lograr con nuestros estudiantes</p>
-</div>
-<div class="grid md:grid-cols-4 gap-8">
-<div class="enhanced-card text-center p-6 opacity-75">
-<div class="w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-<i class="fas fa-graduation-cap text-white text-2xl"></i>
-</div>
-<h3 class="text-3xl font-bold text-purple-400 mb-2">100+</h3>
-<p class="text-gray-300">Estudiantes por Cohorte</p>
-</div>
-<div class="enhanced-card text-center p-6 opacity-75">
-<div class="w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-<i class="fas fa-briefcase text-white text-2xl"></i>
-</div>
-<h3 class="text-3xl font-bold text-purple-400 mb-2">90%</h3>
-<p class="text-gray-300">Tasa de Empleo Objetivo</p>
-</div>
-<div class="enhanced-card text-center p-6 opacity-75">
-<div class="w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-<i class="fas fa-dollar-sign text-white text-2xl"></i>
-</div>
-<h3 class="text-3xl font-bold text-purple-400 mb-2">$3M+</h3>
-<p class="text-gray-300">Salario Promedio Esperado</p>
-</div>
-<div class="enhanced-card text-center p-6 opacity-75">
-<div class="w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-<i class="fas fa-star text-white text-2xl"></i>
-</div>
-<h3 class="text-3xl font-bold text-purple-400 mb-2">5.0/5</h3>
-<p class="text-gray-300">Calificación Objetivo</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Program Section -->
-<section class="py-20 bg-gray-900 relative" id="programa">
-<!-- Overlay de desenfoque -->
-<div class="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-10"></div>
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-<div class="text-center mb-16">
-<h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">Programa de Estudios</h2>
-<p class="text-xl text-gray-300">12 semanas de formación intensiva (Próximamente)</p>
-</div>
-<div class="grid md:grid-cols-3 gap-8">
-<div class="enhanced-card p-8 opacity-75">
-<div class="flex items-center mb-6">
-<div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
-<span class="text-white font-bold">1-4</span>
-</div>
-<h3 class="text-xl font-semibold">Fundamentos</h3>
-</div>
-<ul class="space-y-3 text-gray-300">
-<li><i class="fas fa-check text-green-400 mr-2"></i>HTML5, CSS3 y JavaScript ES6+</li>
-<li><i class="fas fa-check text-green-400 mr-2"></i>Git y control de versiones</li>
-<li><i class="fas fa-check text-green-400 mr-2"></i>Responsive design</li>
-<li><i class="fas fa-check text-green-400 mr-2"></i>Algoritmos y estructuras de datos</li>
-</ul>
-</div>
-<div class="enhanced-card p-8 opacity-75">
-<div class="flex items-center mb-6">
-<div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
-<span class="text-white font-bold">5-8</span>
-</div>
-<h3 class="text-xl font-semibold">Frontend</h3>
-</div>
-<ul class="space-y-3 text-gray-300">
-<li><i class="fas fa-check text-green-400 mr-2"></i>React y ecosistema</li>
-<li><i class="fas fa-check text-green-400 mr-2"></i>State management (Redux)</li>
-<li><i class="fas fa-check text-green-400 mr-2"></i>Testing (Jest, React Testing Library)</li>
-<li><i class="fas fa-check text-green-400 mr-2"></i>Build tools (Webpack, Vite)</li>
-</ul>
-</div>
-<div class="enhanced-card p-8 opacity-75">
-<div class="flex items-center mb-6">
-<div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
-<span class="text-white font-bold">9-12</span>
-</div>
-<h3 class="text-xl font-semibold">Backend &amp; Deploy</h3>
-</div>
-<ul class="space-y-3 text-gray-300">
-<li><i class="fas fa-check text-green-400 mr-2"></i>Node.js y Express</li>
-<li><i class="fas fa-check text-green-400 mr-2"></i>Bases de datos (MongoDB, PostgreSQL)</li>
-<li><i class="fas fa-check text-green-400 mr-2"></i>APIs REST y GraphQL</li>
-<li><i class="fas fa-check text-green-400 mr-2"></i>Deploy y DevOps básico</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<!-- Features Section -->
-<section class="py-20 bg-black relative">
-<!-- Overlay de desenfoque -->
-<div class="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-10"></div>
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-<div class="text-center mb-16">
-<h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">¿Por qué Elegirnos?</h2>
-<p class="text-xl text-gray-300">Ventajas únicas de nuestro bootcamp (Próximamente)</p>
-</div>
-<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-<div class="enhanced-card p-6 opacity-75">
-<div class="flex items-center mb-4">
-<div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
-<i class="fas fa-user-tie text-white"></i>
-</div>
-<h3 class="text-lg font-semibold">Mentoría Personalizada</h3>
-</div>
-<p class="text-gray-300">Cada estudiante tiene un mentor asignado para guía personalizada y feedback constante.</p>
-</div>
-<div class="enhanced-card p-6 opacity-75">
-<div class="flex items-center mb-4">
-<div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
-<i class="fas fa-building text-white"></i>
-</div>
-<h3 class="text-lg font-semibold">Proyectos Reales</h3>
-</div>
-<p class="text-gray-300">Trabajas en proyectos reales con empresas partner para construir tu portafolio.</p>
-</div>
-<div class="enhanced-card p-6 opacity-75">
-<div class="flex items-center mb-4">
-<div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
-<i class="fas fa-shield-alt text-white"></i>
-</div>
-<h3 class="text-lg font-semibold">Garantía de Empleo</h3>
-</div>
-<p class="text-gray-300">Si no consigues trabajo en 6 meses, te devolvemos el 100% de tu inversión.</p>
-</div>
-<div class="enhanced-card p-6 opacity-75">
-<div class="flex items-center mb-4">
-<div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
-<i class="fas fa-users text-white"></i>
-</div>
-<h3 class="text-lg font-semibold">Clases Pequeñas</h3>
-</div>
-<p class="text-gray-300">Máximo 15 estudiantes por cohorte para atención personalizada.</p>
-</div>
-<div class="enhanced-card p-6 opacity-75">
-<div class="flex items-center mb-4">
-<div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
-<i class="fas fa-clock text-white"></i>
-</div>
-<h3 class="text-lg font-semibold">Horarios Flexibles</h3>
-</div>
-<p class="text-gray-300">Modalidad presencial y remota. Horarios de mañana, tarde y fin de semana.</p>
-</div>
-<div class="enhanced-card p-6 opacity-75">
-<div class="flex items-center mb-4">
-<div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
-<i class="fas fa-handshake text-white"></i>
-</div>
-<h3 class="text-lg font-semibold">Red de Contactos</h3>
-</div>
-<p class="text-gray-300">Acceso a nuestra red de empresas partner y oportunidades laborales.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Testimonials Section -->
-<section class="py-20 bg-gray-900 relative">
-<!-- Overlay de desenfoque -->
-<div class="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-10"></div>
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-<div class="text-center mb-16">
-<h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">Testimonios</h2>
-<p class="text-xl text-gray-300">Lo que esperamos lograr con nuestros estudiantes</p>
-</div>
-<div class="grid md:grid-cols-2 gap-8">
-<div class="enhanced-card p-8 opacity-75">
-<div class="flex items-center mb-6">
-<div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mr-4">
-<span class="text-white font-bold text-xl">MA</span>
-</div>
-<div>
-<h4 class="text-lg font-semibold">María Alejandra</h4>
-<p class="text-purple-400">Futura Frontend Developer</p>
-</div>
-</div>
-<p class="text-gray-300 italic mb-4">
-                        "Estoy emocionada por unirme al bootcamp de Escuadrón 404. He escuchado cosas increíbles 
-                        sobre su metodología y estoy segura de que me ayudará a transformar mi carrera."
-                    </p>
-<div class="flex text-yellow-400">
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-</div>
-</div>
-<div class="enhanced-card p-8 opacity-75">
-<div class="flex items-center mb-6">
-<div class="w-16 h-16 bg-gradient-to-r from-green-500 to-purple-500 rounded-full flex items-center justify-center mr-4">
-<span class="text-white font-bold text-xl">CR</span>
-</div>
-<div>
-<h4 class="text-lg font-semibold">Carlos Rodríguez</h4>
-<p class="text-purple-400">Futuro Full Stack Developer</p>
-</div>
-</div>
-<p class="text-gray-300 italic mb-4">
-                        "La oportunidad de trabajar en proyectos reales y tener mentoría personalizada es exactamente 
-                        lo que necesito para dar el salto a la programación profesional."
-                    </p>
-<div class="flex text-yellow-400">
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Registration Section -->
-<section class="py-20 bg-black relative" id="registro">
-<!-- Overlay de desenfoque -->
-<div class="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-10"></div>
-<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-<div class="text-center mb-16">
-<h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">Lista de Espera</h2>
-<p class="text-xl text-gray-300">Únete a nuestra lista de espera y sé el primero en enterarte</p>
-</div>
-<!-- Información sobre el pre-registro -->
-<div class="enhanced-card p-8 mb-8">
-<div class="text-center mb-6">
-<div class="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-<i class="fas fa-bell text-white text-2xl"></i>
-</div>
-<h3 class="text-2xl font-bold mb-4">¿Qué incluye el Pre-registro?</h3>
-</div>
-<div class="grid md:grid-cols-2 gap-6">
-<div class="space-y-4">
-<div class="flex items-start">
-<i class="fas fa-check-circle text-green-400 mr-3 mt-1"></i>
-<p class="text-gray-300"><strong>Notificación temprana:</strong> Sé el primero en saber cuándo se abre el bootcamp</p>
-</div>
-<div class="flex items-start">
-<i class="fas fa-check-circle text-green-400 mr-3 mt-1"></i>
-<p class="text-gray-300"><strong>Descuento especial:</strong> 20% de descuento en la primera cohorte</p>
-</div>
-<div class="flex items-start">
-<i class="fas fa-check-circle text-green-400 mr-3 mt-1"></i>
-<p class="text-gray-300"><strong>Acceso prioritario:</strong> Reserva tu lugar antes que otros</p>
-</div>
-</div>
-<div class="space-y-4">
-<div class="flex items-start">
-<i class="fas fa-check-circle text-green-400 mr-3 mt-1"></i>
-<p class="text-gray-300"><strong>Contenido exclusivo:</strong> Recibe material de preparación gratuito</p>
-</div>
-<div class="flex items-start">
-<i class="fas fa-check-circle text-green-400 mr-3 mt-1"></i>
-<p class="text-gray-300"><strong>Webinars informativos:</strong> Sesiones exclusivas sobre el programa</p>
-</div>
-<div class="flex items-start">
-<i class="fas fa-check-circle text-green-400 mr-3 mt-1"></i>
-<p class="text-gray-300"><strong>Sin compromiso:</strong> Puedes cancelar en cualquier momento</p>
-</div>
-</div>
-</div>
-<!-- Formulario de pre-registro -->
-<div class="enhanced-card p-8 opacity-75">
-<div class="text-center mb-6">
-<h3 class="text-xl font-semibold mb-2">Formulario de Pre-registro</h3>
-<p class="text-gray-400 text-sm">Completa tus datos para unirte a la lista de espera</p>
-</div>
-<form class="space-y-6" id="bootcamp-form" action="https://formspree.io/f/myznlbwj" method="POST">
-<!-- Formspree hidden field -->
-<input type="hidden" name="_subject" value="Nuevo pre-registro para bootcamp desde Escuadrón 404">
-<!-- End Formspree hidden field -->
-<div class="grid md:grid-cols-2 gap-6">
-<div>
-<label class="block text-sm font-medium text-gray-300 mb-2" for="name">Nombre completo</label>
-<input class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:outline-none" id="name" name="name" required="" type="text"/>
-</div>
-<div>
-<label class="block text-sm font-medium text-gray-300 mb-2" for="email">Email</label>
-<input class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:outline-none" id="email" name="email" required="" type="email"/>
-</div>
-</div>
-<div class="grid md:grid-cols-2 gap-6">
-<div>
-<label class="block text-sm font-medium text-gray-300 mb-2" for="phone">Teléfono</label>
-<input class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:outline-none" id="phone" name="phone" type="tel"/>
-</div>
-<div>
-<label class="block text-sm font-medium text-gray-300 mb-2" for="experience">Experiencia previa</label>
-<select class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:outline-none" id="experience" name="experience">
-<option value="ninguna">Ninguna</option>
-<option value="basica">Básica</option>
-<option value="intermedia">Intermedia</option>
-<option value="avanzada">Avanzada</option>
-</select>
-</div>
-</div>
-<!-- Player Name and High Score from retro-demo.html -->
-<div class="grid md:grid-cols-2 gap-6">
-<div>
-<label class="block text-sm font-medium text-gray-300 mb-2" for="player-name">Player Name (Opcional)</label>
-<input type="text" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:outline-none" placeholder="Enter your name" name="player-name">
-</div>
-<div>
-<label class="block text-sm font-medium text-gray-300 mb-2" for="high-score">High Score (Opcional)</label>
-<input type="number" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:outline-none" value="999999" readonly name="high-score">
-</div>
-</div>
-<!-- End of added elements -->
-<div>
-<label class="block text-sm font-medium text-gray-300 mb-2" for="motivation">¿Por qué quieres unirte al bootcamp?</label>
-<textarea class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:outline-none" id="motivation" name="motivation" rows="4"></textarea>
-</div>
-<div class="flex items-center">
-<input class="w-4 h-4 text-purple-600 bg-gray-800 border-gray-600 rounded focus:ring-purple-500" id="terms" name="terms" required="" type="checkbox"/>
-<label class="ml-2 text-sm text-gray-300" for="terms">
-                            Acepto los <a class="text-purple-400 hover:text-purple-300" href="javascript:void(0)">términos y condiciones</a> 
-                            y la <a class="text-purple-400 hover:text-purple-300" href="javascript:void(0)">política de privacidad</a>
-</label>
-</div>
-<button class="w-full btn-primary opacity-75 cursor-not-allowed" disabled="" type="submit">
-<i class="fas fa-bell mr-2"></i>
-                        Unirse a la Lista de Espera (Próximamente)
-                    </button>
-</form>
-</div>
-</div>
-</section>
-<!-- CTA Section -->
-<section class="py-20 bg-gray-900">
-<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<h2 class="text-3xl sm:text-4xl font-bold mb-6 text-gradient">¿Listo para Transformar tu Carrera?</h2>
-<p class="text-xl text-gray-300 mb-8">
-                Únete a nuestra lista de espera y sé el primero en enterarte cuando el bootcamp esté disponible.
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-logo">404</a>
+      <div class="navbar-menu">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="comunidad.html" class="nav-link">Comunidad</a>
+        <a href="agencia.html" class="nav-link">Agencia</a>
+        <a href="bootcamp.html" class="nav-link active">Bootcamp</a>
+        <a href="eventos.html" class="nav-link">Eventos</a>
+        <a href="proyectos.html" class="nav-link">Proyectos</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+      </div>
+      <button class="navbar-toggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="navbar-mobile">
+    <a href="index.html" class="nav-link">Inicio</a>
+    <a href="comunidad.html" class="nav-link">Comunidad</a>
+    <a href="agencia.html" class="nav-link">Agencia</a>
+    <a href="bootcamp.html" class="nav-link active">Bootcamp</a>
+    <a href="eventos.html" class="nav-link">Eventos</a>
+    <a href="proyectos.html" class="nav-link">Proyectos</a>
+    <a href="contacto.html" class="nav-link">Contacto</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section min-h-screen flex items-center pt-16 relative">
+    <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-10"></div>
+    <div class="absolute top-20 left-1/2 transform -translate-x-1/2 z-20">
+      <div class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-full shadow-lg animate-pulse">
+        <i class="fas fa-clock mr-2"></i><span class="font-bold">Próximamente</span>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-20">
+      <div class="text-center">
+        <h1 class="text-4xl sm:text-6xl font-bold mb-6 animate-slide-in-left">
+          Bootcamp de <span class="text-gradient">Programación</span>
+        </h1>
+        <div class="terminal-effect text-xl sm:text-2xl mb-8 max-w-3xl mx-auto animate-fade-in">
+          <div class="flex items-center justify-center mb-2">
+            <span class="text-green-400 mr-2">$</span>
+            <span class="text-blue-400">echo</span>
+            <span class="text-white ml-2">"Próximamente: Transforma tu carrera en 12 semanas"</span>
+          </div>
+          <div class="text-sm text-gray-400">
+            Programa intensivo de desarrollo full-stack que estará disponible pronto
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-6 justify-center mb-12 animate-bounce-in">
+          <a class="modern-btn modern-btn-primary" href="#registro">
+            <span class="btn-icon"><i class="fas fa-user-plus"></i></span>
+            <span class="btn-text">Pre-registrarse</span>
+            <span class="btn-shine"></span>
+          </a>
+          <a class="modern-btn modern-btn-secondary" href="#info">
+            <span class="btn-icon"><i class="fas fa-info-circle"></i></span>
+            <span class="btn-text">Ver Información</span>
+            <span class="btn-shine"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Info Section -->
+  <section class="py-20 bg-gray-900" id="info">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">¿Qué es el Bootcamp?</h2>
+        <p class="text-xl text-gray-300">Información sobre nuestro programa intensivo</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="text-2xl font-bold mb-6 text-purple-400">Programa Intensivo de 12 Semanas</h3>
+          <div class="space-y-4 text-gray-300">
+            <div class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-3 mt-1"></i><p><strong>Desarrollo Full-Stack:</strong> Aprende frontend y backend desde cero</p></div>
+            <div class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-3 mt-1"></i><p><strong>Mentoría Personalizada:</strong> Un mentor experto te guiará durante todo el proceso</p></div>
+            <div class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-3 mt-1"></i><p><strong>Proyectos Reales:</strong> Trabaja en proyectos de empresas reales</p></div>
+            <div class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-3 mt-1"></i><p><strong>Garantía de Empleo:</strong> Si no consigues trabajo, te devolvemos tu inversión</p></div>
+            <div class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-3 mt-1"></i><p><strong>Red de Contactos:</strong> Acceso a nuestra red de empresas partner</p></div>
+          </div>
+        </div>
+        <div class="enhanced-card p-8 text-center">
+          <div class="w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto mb-6 flex items-center justify-center">
+            <i class="fas fa-rocket text-white text-3xl"></i>
+          </div>
+          <h4 class="text-xl font-semibold mb-4">¿Por qué elegir nuestro Bootcamp?</h4>
+          <p class="text-gray-300 mb-6">
+            Nuestro bootcamp está diseñado por desarrolladores para desarrolladores. 
+            No solo aprenderás a programar, sino que desarrollarás las habilidades 
+            necesarias para destacar en el mercado laboral.
+          </p>
+          <div class="bg-purple-900 bg-opacity-50 p-4 rounded-lg">
+            <p class="text-purple-300 text-sm">
+              <i class="fas fa-info-circle mr-2"></i>
+              <strong>Próximamente:</strong> El bootcamp estará disponible en los próximos meses. 
+              Mantente atento a nuestras redes sociales para más información.
             </p>
-<div class="flex flex-col sm:flex-row gap-6 justify-center">
-<a class="modern-btn modern-btn-primary" href="#registro">
-<span class="btn-icon">
-<i class="fas fa-bell"></i>
-</span>
-<span class="btn-text">Unirse a la Lista de Espera</span>
-<span class="btn-shine"></span>
-</a>
-<a class="modern-btn modern-btn-secondary" href="https://wa.me/573165102584">
-<span class="btn-icon">
-<i class="fab fa-whatsapp"></i>
-</span>
-<span class="btn-text">Hablar con un Asesor</span>
-<span class="btn-shine"></span>
-</a>
-</div>
-<div class="mt-8 p-4 bg-purple-900 bg-opacity-50 rounded-lg">
-<p class="text-purple-300 text-sm">
-<i class="fas fa-info-circle mr-2"></i>
-<strong>Próximamente:</strong> El bootcamp estará disponible en los próximos meses. 
-                    Mantente atento a nuestras redes sociales para más información.
-                </p>
-</div>
-</div>
-</section>
-<!-- Footer -->
-<footer class="bg-gray-900 text-white py-12">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid md:grid-cols-4 gap-8">
-<div class="col-span-1 md:col-span-2">
-<h3 class="text-2xl font-bold text-purple-400 mb-4">Escuadrón 404</h3>
-<p class="text-gray-300 mb-4">
-                        Somos la comunidad de desarrolladores que transforma ideas en soluciones digitales extraordinarias. 
-                        Únete a nosotros y forma parte del futuro de la tecnología.
-                    </p>
-<div class="flex space-x-4">
-<a class="text-gray-400 hover:text-purple-400 transition-colors" href="https://discord.gg/QQZmhGQncf" target="_blank">
-<i class="fab fa-discord text-xl"></i>
-</a>
-<a class="text-gray-400 hover:text-purple-400 transition-colors" href="https://wa.me/573165102584">
-<i class="fab fa-whatsapp text-xl"></i>
-</a>
-                <a class="text-gray-400 hover:text-purple-400 transition-colors" href="https://github.com/Escuadron404" aria-label="Social Media">
-<i class="fab fa-github text-xl"></i>
-</a>
-                <a class="text-gray-400 hover:text-purple-400 transition-colors" href="https://www.linkedin.com/company/escuadr-n-404/" aria-label="Social Media">
-<i class="fab fa-linkedin text-xl"></i>
-</a>
-</div>
-</div>
-<div>
-{{ ... }}
-<ul class="space-y-2 text-gray-300">
-<li><a class="hover:text-purple-400 transition-colors" href="agencia.html">Desarrollo Web</a></li>
-<li><a class="hover:text-purple-400 transition-colors" href="agencia.html">Apps Móviles</a></li>
-<li><a class="hover:text-purple-400 transition-colors" href="agencia.html">Cloud &amp; DevOps</a></li>
-<li><a class="hover:text-purple-400 transition-colors" href="bootcamp.html">Bootcamp</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-lg font-semibold mb-4">Comunidad</h4>
-<ul class="space-y-2 text-gray-300">
-<li><a class="hover:text-purple-400 transition-colors" href="comunidad.html">Sobre Nosotros</a></li>
-<li><a class="hover:text-purple-400 transition-colors" href="eventos.html">Eventos</a></li>
-<li><a class="hover:text-purple-400 transition-colors" href="proyectos.html">Proyectos</a></li>
-<li><a class="hover:text-purple-400 transition-colors" href="contacto.html">Contacto</a></li>
-</ul>
-</div>
-</div>
-<div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-<p>© 2025 Escuadrón 404. Todos los derechos reservados.</p>
-</div>
-</div>
-</footer>
-<script src="main.js"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-20 bg-black relative">
+    <div class="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-10"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">Objetivos del Programa</h2>
+        <p class="text-xl text-gray-3300">Lo que esperamos lograr con nuestros estudiantes</p>
+      </div>
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="enhanced-card text-center p-6 opacity-75">
+          <div class="w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-graduation-cap text-white text-2xl"></i>
+          </div>
+          <h3 class="text-3xl font-bold text-purple-400 mb-2">100+</h3>
+          <p class="text-gray-300">Estudiantes por Cohorte</p>
+        </div>
+        <div class="enhanced-card text-center p-6 opacity-75">
+          <div class="w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-briefcase text-white text-2xl"></i>
+          </div>
+          <h3 class="text-3xl font-bold text-purple-400 mb-2">90%</h3>
+          <p class="text-gray-300">Tasa de Empleo Objetivo</p>
+        </div>
+        <div class="enhanced-card text-center p-6 opacity-75">
+          <div class="w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-dollar-sign text-white text-2xl"></i>
+          </div>
+          <h3 class="text-3xl font-bold text-purple-400 mb-2">$3M+</h3>
+          <p class="text-gray-300">Salario Promedio Esperado</p>
+        </div>
+        <div class="enhanced-card text-center p-6 opacity-75">
+          <div class="w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-star text-white text-2xl"></i>
+          </div>
+          <h3 class="text-3xl font-bold text-purple-400 mb-2">5.0/5</h3>
+          <p class="text-gray-300">Calificación Objetivo</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Program Section -->
+  <section class="py-20 bg-gray-900 relative" id="programa">
+    <div class="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-10"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">Programa de Estudios</h2>
+        <p class="text-xl text-gray-300">12 semanas de formación intensiva (Próximamente)</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="enhanced-card p-8 opacity-75">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+              <span class="text-white font-bold">1-4</span>
+            </div>
+            <h3 class="text-xl font-semibold">Fundamentos</h3>
+          </div>
+          <ul class="space-y-3 text-gray-300">
+            <li><i class="fas fa-check text-green-400 mr-2"></i>HTML5, CSS3 y JavaScript ES6+</li>
+            <li><i class="fas fa-check text-green-400 mr-2"></i>Git y control de versiones</li>
+            <li><i class="fas fa-check text-green-400 mr-2"></i>Responsive design</li>
+            <li><i class="fas fa-check text-green-400 mr-2"></i>Algoritmos y estructuras de datos</li>
+          </ul>
+        </div>
+        <div class="enhanced-card p-8 opacity-75">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+              <span class="text-white font-bold">5-8</span>
+            </div>
+            <h3 class="text-xl font-semibold">Frontend</h3>
+          </div>
+          <ul class="space-y-3 text-gray-300">
+            <li><i class="fas fa-check text-green-400 mr-2"></i>React y ecosistema</li>
+            <li><i class="fas fa-check text-green-400 mr-2"></i>State management (Redux)</li>
+            <li><i class="fas fa-check text-green-400 mr-2"></i>Testing (Jest, React Testing Library)</li>
+            <li><i class="fas fa-check text-green-400 mr-2"></i>Build tools (Webpack, Vite)</li>
+          </ul>
+        </div>
+        <div class="enhanced-card p-8 opacity-75">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+              <span class="text-white font-bold">9-12</span>
+            </div>
+            <h3 class="text-xl font-semibold">Backend &amp; Deploy</h3>
+          </div>
+          <ul class="space-y-3 text-gray-300">
+            <li><i class="fas fa-check text-green-400 mr-2"></i>Node.js y Express</li>
+            <li><i class="fas fa-check text-green-400 mr-2"></i>Bases de datos (MongoDB, PostgreSQL)</li>
+            <li><i class="fas fa-check text-green-400 mr-2"></i>APIs REST y GraphQL</li>
+            <li><i class="fas fa-check text-green-400 mr-2"></i>Deploy y DevOps básico</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-20 bg-black relative">
+    <div class="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-10"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">¿Por qué Elegirnos?</h2>
+        <p class="text-xl text-gray-300">Ventajas únicas de nuestro bootcamp (Próximamente)</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="enhanced-card p-6 opacity-75">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-user-tie text-white"></i>
+            </div>
+            <h3 class="text-lg font-semibold">Mentoría Personalizada</h3>
+          </div>
+          <p class="text-gray-300">Cada estudiante tiene un mentor asignado para guía personalizada y feedback constante.</p>
+        </div>
+        <div class="enhanced-card p-6 opacity-75">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-building text-white"></i>
+            </div>
+            <h3 class="text-lg font-semibold">Proyectos Reales</h3>
+          </div>
+          <p class="text-gray-300">Trabajas en proyectos reales con empresas partner para construir tu portafolio.</p>
+        </div>
+        <div class="enhanced-card p-6 opacity-75">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-shield-alt text-white"></i>
+            </div>
+            <h3 class="text-lg font-semibold">Garantía de Empleo</h3>
+          </div>
+          <p class="text-gray-300">Si no consigues trabajo en 6 meses, te devolvemos el 100% de tu inversión.</p>
+        </div>
+        <div class="enhanced-card p-6 opacity-75">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-users text-white"></i>
+            </div>
+            <h3 class="text-lg font-semibold">Clases Pequeñas</h3>
+          </div>
+          <p class="text-gray-300">Máximo 15 estudiantes por cohorte para atención personalizada.</p>
+        </div>
+        <div class="enhanced-card p-6 opacity-75">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-clock text-white"></i>
+            </div>
+            <h3 class="text-lg font-semibold">Horarios Flexibles</h3>
+          </div>
+          <p class="text-gray-300">Modalidad presencial y remota. Horarios de mañana, tarde y fin de semana.</p>
+        </div>
+        <div class="enhanced-card p-6 opacity-75">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-handshake text-white"></i>
+            </div>
+            <h3 class="text-lg font-semibold">Red de Contactos</h3>
+          </div>
+          <p class="text-gray-300">Acceso a nuestra red de empresas partner y oportunidades laborales.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-20 bg-gray-900 relative">
+    <div class="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-10"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">Testimonios</h2>
+        <p class="text-xl text-gray-300">Lo que esperamos lograr con nuestros estudiantes</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="enhanced-card p-8 opacity-75">
+          <div class="flex items-center mb-6">
+            <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mr-4">
+              <span class="text-white font-bold text-xl">MA</span>
+            </div>
+            <div>
+              <h4 class="text-lg font-semibold">María Alejandra</h4>
+              <p class="text-purple-400">Futura Frontend Developer</p>
+            </div>
+          </div>
+          <p class="text-gray-300 italic mb-4">"Estoy emocionada por unirme al bootcamp de Escuadrón 404. He escuchado cosas increíbles sobre su metodología y estoy segura de que me ayudará a transformar mi carrera."</p>
+          <div class="flex text-yellow-400"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        </div>
+        <div class="enhanced-card p-8 opacity-75">
+          <div class="flex items-center mb-6">
+            <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-purple-500 rounded-full flex items-center justify-center mr-4">
+              <span class="text-white font-bold text-xl">CR</span>
+            </div>
+            <div>
+              <h4 class="text-lg font-semibold">Carlos Rodríguez</h4>
+              <p class="text-purple-400">Futuro Full Stack Developer</p>
+            </div>
+          </div>
+          <p class="text-gray-300 italic mb-4">"La oportunidad de trabajar en proyectos reales y tener mentoría personalizada es exactamente lo que necesito para dar el salto a la programación profesional."</p>
+          <div class="flex text-yellow-400"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Registration Section -->
+  <section class="py-20 bg-black relative" id="registro">
+    <div class="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-10"></div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">Lista de Espera</h2>
+        <p class="text-xl text-gray-300">Únete a nuestra lista de espera y sé el primero en enterarte</p>
+      </div>
+
+      <div class="enhanced-card p-8 mb-8">
+        <div class="text-center mb-6">
+          <div class="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+            <i class="fas fa-bell text-white text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">¿Qué incluye el Pre-registro?</h3>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="space-y-4">
+            <div class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-3 mt-1"></i><p class="text-gray-300"><strong>Notificación temprana:</strong> Sé el primero en saber cuándo se abre el bootcamp</p></div>
+            <div class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-3 mt-1"></i><p class="text-gray-300"><strong>Descuento especial:</strong> 20% de descuento en la primera cohorte</p></div>
+            <div class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-3 mt-1"></i><p class="text-gray-300"><strong>Acceso prioritario:</strong> Reserva tu lugar antes que otros</p></div>
+          </div>
+          <div class="space-y-4">
+            <div class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-3 mt-1"></i><p class="text-gray-300"><strong>Contenido exclusivo:</strong> Recibe material de preparación gratuito</p></div>
+            <div class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-3 mt-1"></i><p class="text-gray-300"><strong>Webinars informativos:</strong> Sesiones exclusivas sobre el programa</p></div>
+            <div class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-3 mt-1"></i><p class="text-gray-300"><strong>Sin compromiso:</strong> Puedes cancelar en cualquier momento</p></div>
+          </div>
+        </div>
+
+        <!-- Formulario de pre-registro (ENVÍA A APPS SCRIPT) -->
+        <div class="enhanced-card p-8 opacity-100 mt-8">
+          <div class="text-center mb-6">
+            <h3 class="text-xl font-semibold mb-2">Formulario de Pre-registro</h3>
+            <p class="text-gray-400 text-sm">Completa tus datos para unirte a la lista de espera</p>
+          </div>
+
+          <!-- Importante: sin action/method, lo maneja main.js con fetch + FormData -->
+          <form class="space-y-6" id="bootcamp-form" novalidate>
+            <!-- Ruta en Apps Script -->
+            <input type="hidden" name="tipo" value="bootcamp" />
+
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-medium text-gray-300 mb-2" for="name">Nombre completo *</label>
+                <input class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:outline-none" id="name" name="name" type="text" required/>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-300 mb-2" for="email">Email *</label>
+                <input class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:outline-none" id="email" name="email" type="email" required autocomplete="email"/>
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-medium text-gray-300 mb-2" for="phone">Teléfono</label>
+                <input class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:outline-none" id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" pattern="^\+?[0-9\s\-().]{7,}$"/>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-300 mb-2" for="experience">Experiencia previa</label>
+                <select class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:outline-none" id="experience" name="experience">
+                  <option value="ninguna">Ninguna</option>
+                  <option value="basica">Básica</option>
+                  <option value="intermedia">Intermedia</option>
+                  <option value="avanzada">Avanzada</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Extras opcionales -->
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-medium text-gray-300 mb-2" for="player-name">Player Name (Opcional)</label>
+                <input type="text" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:outline-none" id="player-name" name="player-name" placeholder="Enter your name">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-300 mb-2" for="high-score">High Score (Opcional)</label>
+                <input type="number" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:outline-none" id="high-score" name="high-score" value="999999" readonly>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-300 mb-2" for="motivation">¿Por qué quieres unirte al bootcamp?</label>
+              <textarea class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:outline-none" id="motivation" name="motivation" rows="4"></textarea>
+            </div>
+
+            <!-- Honeypot anti-spam -->
+            <div class="hidden">
+              <input type="text" name="_hp" tabindex="-1" autocomplete="off"/>
+            </div>
+
+            <div class="flex items-center">
+              <input class="w-4 h-4 text-purple-600 bg-gray-800 border-gray-600 rounded focus:ring-purple-500" id="terms" name="terms" type="checkbox" required/>
+              <label class="ml-2 text-sm text-gray-300" for="terms">
+                Acepto los <a class="text-purple-400 hover:text-purple-300" href="terminos.html">términos y condiciones</a> 
+                y la <a class="text-purple-400 hover:text-purple-300" href="privacidad.html">política de privacidad</a>
+              </label>
+            </div>
+
+            <button class="w-full btn-primary" type="submit">
+              <i class="fas fa-bell mr-2" aria-hidden="true"></i> Unirse a la Lista de Espera
+            </button>
+
+            <!-- Mensaje de estado -->
+            <p class="form-msg text-sm mt-3 text-gray-300"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gray-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-gradient">¿Listo para Transformar tu Carrera?</h2>
+      <p class="text-xl text-gray-300 mb-8">
+        Únete a nuestra lista de espera y sé el primero en enterarte cuando el bootcamp esté disponible.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a class="modern-btn modern-btn-primary" href="#registro">
+          <span class="btn-icon"><i class="fas fa-bell"></i></span>
+          <span class="btn-text">Unirse a la Lista de Espera</span>
+          <span class="btn-shine"></span>
+        </a>
+        <a class="modern-btn modern-btn-secondary" href="https://wa.me/573165102584">
+          <span class="btn-icon"><i class="fab fa-whatsapp"></i></span>
+          <span class="btn-text">Hablar con un Asesor</span>
+          <span class="btn-shine"></span>
+        </a>
+      </div>
+      <div class="mt-8 p-4 bg-purple-900 bg-opacity-50 rounded-lg">
+        <p class="text-purple-300 text-sm">
+          <i class="fas fa-info-circle mr-2"></i>
+          <strong>Próximamente:</strong> El bootcamp estará disponible en los próximos meses. 
+          Mantente atento a nuestras redes sociales para más información.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="col-span-1 md:col-span-2">
+          <h3 class="text-2xl font-bold text-purple-400 mb-4">Escuadrón 404</h3>
+          <p class="text-gray-300 mb-4">
+            Somos la comunidad de desarrolladores que transforma ideas en soluciones digitales extraordinarias. 
+            Únete a nosotros y forma parte del futuro de la tecnología.
+          </p>
+          <div class="flex space-x-4">
+            <a class="text-gray-400 hover:text-purple-400 transition-colors" href="https://discord.gg/QQZmhGQncf" target="_blank"><i class="fab fa-discord text-xl"></i></a>
+            <a class="text-gray-400 hover:text-purple-400 transition-colors" href="https://wa.me/573165102584"><i class="fab fa-whatsapp text-xl"></i></a>
+            <a class="text-gray-400 hover:text-purple-400 transition-colors" href="https://github.com/Escuadron404" aria-label="Social Media"><i class="fab fa-github text-xl"></i></a>
+            <a class="text-gray-400 hover:text-purple-400 transition-colors" href="https://www.linkedin.com/company/escuadr-n-404/" aria-label="Social Media"><i class="fab fa-linkedin text-xl"></i></a>
+          </div>
+        </div>
+        <div>
+          {{ ... }}
+          <ul class="space-y-2 text-gray-300">
+            <li><a class="hover:text-purple-400 transition-colors" href="agencia.html">Desarrollo Web</a></li>
+            <li><a class="hover:text-purple-400 transition-colors" href="agencia.html">Apps Móviles</a></li>
+            <li><a class="hover:text-purple-400 transition-colors" href="agencia.html">Cloud &amp; DevOps</a></li>
+            <li><a class="hover:text-purple-400 transition-colors" href="bootcamp.html">Bootcamp</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Comunidad</h4>
+          <ul class="space-y-2 text-gray-300">
+            <li><a class="hover:text-purple-400 transition-colors" href="comunidad.html">Sobre Nosotros</a></li>
+            <li><a class="hover:text-purple-400 transition-colors" href="eventos.html">Eventos</a></li>
+            <li><a class="hover:text-purple-400 transition-colors" href="proyectos.html">Proyectos</a></li>
+            <li><a class="hover:text-purple-400 transition-colors" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <p>© 2025 Escuadrón 404. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Carga tu JS -->
+  <script src="main.js" defer></script>
 </body>
 </html>
